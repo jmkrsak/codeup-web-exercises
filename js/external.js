@@ -29,8 +29,8 @@ const scheduleConflict = confirm("Does your current schedule conflict with the c
 const canEnroll = !classFull && !scheduleConflict;
 alert("Can you enroll in class? " + canEnroll);
 
-const drinksBought = Number.parseInt(prompt("How many drinks have you bought?"));
+const itemsBought = Number.parseInt(prompt("How many items have you bought?"));
 const offerExpired = confirm("Has the offer expired?");
 const premiumMember = confirm("Are you a premium member?");
-const canBeApplied = (drinksBought > 2 || premiumMember) && !offerExpired;
+const canBeApplied = (itemsBought > 2 || premiumMember) && !offerExpired;
 alert("Can the offer be applied? " + canBeApplied);
