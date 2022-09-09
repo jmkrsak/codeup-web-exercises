@@ -125,11 +125,11 @@ let doesNotConflict = true
 undefined
 notFull && doesNotConflict
 true
-let buysTowOrMore = true
+let buysTwoOrMore = true
 undefined
 let hasNotExpired = true
 undefined
 let premiumMember = true
 undefined
-(buysTowOrMore && hasNotExpired) || premiumMember
+(buysTwoOrMore && hasNotExpired) || premiumMember
 true
