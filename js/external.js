@@ -5,7 +5,7 @@ console.log("Hello from external JavaScript");
 alert("Welcome to my Website!");
 
 const favColor = prompt("What is your favorite color?");
-alert("Great, " + favColor + " is my favorite color too!");
+alert("Great, " + favColor.trim() + " is my favorite color too!");
 
 const littleMermaid = Number.parseInt(prompt("How many days for Little Mermaid?"));
 const brotherBear = Number.parseInt(prompt("How many days for Brother Bear?"));
