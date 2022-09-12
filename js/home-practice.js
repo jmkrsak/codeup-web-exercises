@@ -341,4 +341,16 @@ var favoriteThing = prompt("What is your favorite thing?");
 alert("Gerat, " + favoriteThing.trim() + " is my favoriet thing too!!!");
 console.log("The user entered: " + favoriteThing);
 
+let pricePerDay =3;
+let daysRented;
+
+daysRented = prompt("How many days do you want to rent it out?")
+
+let totalMermaid = pricePerDay * daysRented;
+let totalBear = pricePerDay * daysRented;
+let totalHerc = pricePerDay * daysRented;
+
+let totalPrice = totalMermaid + totalBear + totalHerc;
+
+alert(totalPrice);
 
