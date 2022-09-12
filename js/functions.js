@@ -9,6 +9,12 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name){
+    return("Hello, " + name);
+}
+
+sayHello("John-Michael");
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,12 +23,18 @@
  * console.log 'helloMessage' to check your work
  */
 
+var helloMessage = sayHello("John-Michael");
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var myName = "John-Michael";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -46,6 +58,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num){
+    return num === 2;
+}
+console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +75,23 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tip, bill){
+    tip /= 100;
+    let total = tip * bill;
+    return "$" + total;
+}
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+var billTotal = parseFloat(prompt("What is your bill total?"));
+var tipPercentage = parseFloat(prompt("What percentage would you like to tip"));
+alert(calculateTip(tipPercentage, billTotal));
+
 
 /**
  * TODO:
@@ -79,3 +107,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(price, discount){
+    let result = price * discount;
+    return price - result;
+}
+console.log(applyDiscount(50, .20));
+var whatsThePrice = parseFloat(prompt("What is the total of the bill?"));
+var discountAmount = parseFloat(prompt("What is your discount percentage?"));
+alert(applyDiscount(whatsThePrice, discountAmount));

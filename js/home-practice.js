@@ -323,34 +323,129 @@
 // // neither the username or password can start or end with whitespace
 //     let noWhiteSpace = (password === password.trim() && username === username.trim())
 
-"use strict";
+// "use strict";
+//
+// console.log("Hello from home!!! You got this!!!");
+//
+// alert("If you put in the time you can accomplish anyhting!!!");
+//
+// var confirmed = confirm("Are you ready for the rest of your life?");
+// console.log(confirmed);
+//
+// var userInput = prompt("What's your number 1 goal for this week?");
+// console.log("The user entered: " + userInput);
+//
+// alert("1 year from now you will have a better work and home life, because you're putting in the work now!");
+//
+// var favoriteThing = prompt("What is your favorite thing?");
+// alert("Gerat, " + favoriteThing.trim() + " is my favoriet thing too!!!");
+// console.log("The user entered: " + favoriteThing);
+//
+// let pricePerDay =3;
+// let daysRented;
+//
+// daysRented = prompt("How many days do you want to rent it out?")
+//
+// let totalMermaid = pricePerDay * daysRented;
+// let totalBear = pricePerDay * daysRented;
+// let totalHerc = pricePerDay * daysRented;
+//
+// let totalPrice = totalMermaid + totalBear + totalHerc;
+//
+// alert(totalPrice);
 
-console.log("Hello from home!!! You got this!!!");
+console.log ("FUNCTIONS LECTURE");
 
-alert("If you put in the time you can accomplish anyhting!!!");
+// WHAT ARE FUNCTIONS
+// chunks of code that can be reused
 
-var confirmed = confirm("Are you ready for the rest of your life?");
-console.log(confirmed);
+// DEFINING FUNCTION & FUNCTION SYNTAX
+function nameOfFunction(parameters){
+    //code goes here
+    console.log("hello from inside of nameOfFunction");
+}
 
-var userInput = prompt("What's your number 1 goal for this week?");
-console.log("The user entered: " + userInput);
+nameOfFunction(); //calls the function to run the codethats living inside the curly brackets in the function you called (by its name)
 
-alert("1 year from now you will have a better work and home life, because you're putting in the work now!");
 
-var favoriteThing = prompt("What is your favorite thing?");
-alert("Gerat, " + favoriteThing.trim() + " is my favoriet thing too!!!");
-console.log("The user entered: " + favoriteThing);
+//WHAT DOES "RETURN" MEAN
+// write a function that returns my age
+// function returnAge(){
+//     return 33 //return a value once the function is run
+// }
+// console.log(returnAge());
+//
+// function addTwoNumbers(){
+//     return 7 + 3;
+// }
+//
+// console.log(addTwoNumbers());
+// alert(addTwoNumbers());
 
-let pricePerDay =3;
-let daysRented;
+//wriet a function that returns a users age
+//1 prompt
+//2 save age to a varible
+//3 pass users age into the function
+//4 return users age
+//5 call the function to run
 
-daysRented = prompt("How many days do you want to rent it out?")
+// let userAge = prompt("what's your age?");
+// console.log(userAge);
+//
+// function whatIsYourAge(age){
+//     return age;
+// }
+//
+// console.log(whatIsYourAge(userAge));
 
-let totalMermaid = pricePerDay * daysRented;
-let totalBear = pricePerDay * daysRented;
-let totalHerc = pricePerDay * daysRented;
+//* come back with various users age
 
-let totalPrice = totalMermaid + totalBear + totalHerc;
+//write a function that returns sum of 2 numbers
 
-alert(totalPrice);
+//1 define a function - placeholders for the 2 numbers that the function will need in order to complete its function
+//2 call the function with 2 numbers - arguments : actual values being passed in
+// placeholders for 2 numbers up to you
+// function sumTwoNumbers(num1, num2){
+//     let sum = num1 + num2;
+//     return sum;
+// }
+//
+// console.log(sumTwoNumbers(18, 22));
+// console.log(sumTwoNumbers(25, 13));
+//
+// let firstNumber = parseFloat(prompt("give me digits?"));
+// let secondNumber = parseFloat(prompt("more numbers pls?"));
+//
+// console.log("results of sumTwoNumbers : " + sumTwoNumbers(firstNumber, secondNumber));
+//
 
+// TODO: write a function that prompts the user for their full name and returns their full name. Consol log the results of the function
+
+// ANONYMOUS FUNCTIONS
+
+
+// write a function that returns the first and last name of a student
+//1 prompt for the first and last name
+//2 store first and last name in var
+//3 define the function -- parameters? yes
+// // first * last name
+//4 call the function -- arguments? yes
+function firstAndLast(userfirstname, userlastname){
+    let name = userfirstname + userlastname;
+    return name;
+}
+let firstName = (prompt("What is your first name?"));
+let lastName = (prompt("What is your last name?"));
+
+console.log("Your name is " + firstAndLast(firstName + " ", lastName));
+
+
+
+
+// // variables
+
+// PARAMETERS VS ARGUMENTS?
+
+
+
+// TRY IT OUT / EXAMPLES
