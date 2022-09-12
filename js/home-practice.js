@@ -322,3 +322,23 @@
 //
 // // neither the username or password can start or end with whitespace
 //     let noWhiteSpace = (password === password.trim() && username === username.trim())
+
+"use strict";
+
+console.log("Hello from home!!! You got this!!!");
+
+alert("If you put in the time you can accomplish anyhting!!!");
+
+var confirmed = confirm("Are you ready for the rest of your life?");
+console.log(confirmed);
+
+var userInput = prompt("What's your number 1 goal for this week?");
+console.log("The user entered: " + userInput);
+
+alert("1 year from now you will have a better work and home life, because you're putting in the work now!");
+
+var favoriteThing = prompt("What is your favorite thing?");
+alert("Gerat, " + favoriteThing.trim() + " is my favoriet thing too!!!");
+console.log("The user entered: " + favoriteThing);
+
+
