@@ -20,10 +20,24 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color){
-
-}
-
+// function analyzeColor(color) {
+//     if (color === "blue") {
+//         return "blue is the color of the sky";
+//     } else if (color === "red") {
+//         return "Strawberries are red";
+//     } else if (color === "indigo") {
+//         return "I don't know anything about indigo";
+//     } else if (color === "orange") {
+//         return "basketballs are orange";
+//     } else if (color === "yellow") {
+//         return "I think the sun is yellow";
+//     } else if (color === "green") {
+//         return "green is my favorite color";
+//     } else {
+//         return color + " is the worst color!!!";
+//     }
+// }
+// console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -38,10 +52,41 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+// console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+
+// let color = prompt("What is your favorite color?");
+//
+//     switch (color) {
+//         case "blue":
+//             alert("blue is the color of the sky");
+//             break;
+//         case "red":
+//             alert("Strawberries are red");
+//             break;
+//         case "indigo":
+//             alert("I don't know anything about indigo");
+//             break;
+//         case "orange":
+//             alert("basketballs are orange");
+//             break;
+//         case "yellow":
+//             alert("I think the sun is yellow");
+//             break;
+//         case "green":
+//             alert("green is my favorite color");
+//             break;
+//         default:
+//             alert(color + " is the worst color");
+//             break;
+//     }
+//
+// console.log(color);
 
 /**
  * TODO:
@@ -49,6 +94,36 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+function analyzeColor() {
+    let color = prompt("What is your favorite color?");
+    console.log(color);
+    switch (color) {
+        case "blue":
+            alert("blue is the color of the sky");
+            break;
+        case "red":
+            alert("Strawberries are red");
+            break;
+        case "indigo":
+            alert("I don't know anything about indigo");
+            break;
+        case "orange":
+            alert("basketballs are orange");
+            break;
+        case "yellow":
+            alert("I think the sun is yellow");
+            break;
+        case "green":
+            alert("green is my favorite color");
+            break;
+        default:
+            alert(color + " is the worst color");
+            break;
+    }
+    return color
+}
+console.log(analyzeColor());
 
 /* ########################################################################## */
 

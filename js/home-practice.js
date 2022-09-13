@@ -354,18 +354,18 @@
 //
 // alert(totalPrice);
 
-console.log ("FUNCTIONS LECTURE");
+// console.log ("FUNCTIONS LECTURE");
 
 // WHAT ARE FUNCTIONS
 // chunks of code that can be reused
 
 // DEFINING FUNCTION & FUNCTION SYNTAX
-function nameOfFunction(parameters){
-    //code goes here
-    console.log("hello from inside of nameOfFunction");
-}
-
-nameOfFunction(); //calls the function to run the codethats living inside the curly brackets in the function you called (by its name)
+// function nameOfFunction(parameters){
+//     //code goes here
+//     console.log("hello from inside of nameOfFunction");
+// }
+//
+// nameOfFunction(); //calls the function to run the codethats living inside the curly brackets in the function you called (by its name)
 
 
 //WHAT DOES "RETURN" MEAN
@@ -430,14 +430,14 @@ nameOfFunction(); //calls the function to run the codethats living inside the cu
 //3 define the function -- parameters? yes
 // // first * last name
 //4 call the function -- arguments? yes
-function firstAndLast(userfirstname, userlastname){
-    let name = userfirstname + userlastname;
-    return name;
-}
-let firstName = (prompt("What is your first name?"));
-let lastName = (prompt("What is your last name?"));
-
-console.log("Your name is " + firstAndLast(firstName + " ", lastName));
+// function firstAndLast(userfirstname, userlastname){
+//     let name = userfirstname + userlastname;
+//     return name;
+// }
+// let firstName = (prompt("What is your first name?"));
+// let lastName = (prompt("What is your last name?"));
+//
+// console.log("Your name is " + firstAndLast(firstName + " ", lastName));
 
 
 
@@ -449,3 +449,74 @@ console.log("Your name is " + firstAndLast(firstName + " ", lastName));
 
 
 // TRY IT OUT / EXAMPLES
+
+// IF STATEMENTS
+
+// if(conditional){
+//     // run this code if conditional is true
+// }
+
+// let x = 15;
+//
+// if (x > 5){
+//     console.log("hey x is greater than 5, hello from inside the if statement!")
+// }
+//
+// console.log("outside of the if statement")
+
+// let userName = prompt("Hey whats your unsername");
+//
+// if(userName.toLowerCase() === "laura"){
+//     alert("welcome to the website of Lauras");
+// } else {
+//     alert("welcome everyone else");
+// }
+
+//  if the temperature is grater than or equal to 75 -- bring sunglasses
+// if the temperature is between 55-74 -- bring a sweater
+// if the temp is below 54 -- stay inside
+// let temperature = 60;
+//
+// if(temperature >= 75) {
+//     alert("bring sunglasses!");
+// } else if(temperature > 55 && temperature < 75) {
+//     alert("bring a sweater!!");
+// } else {
+//     alert("stay inside!!!");
+// }
+
+// function addTwoIfDivisible(num) {
+//     if(num % 2 == 0) {
+//         console.log("this number is even");
+//     } else {
+//         console.log("this number is odd");
+//     }
+// }
+//
+// addTwoIfDivisible(8);
+//
+// // TERNARY
+//
+// // num > 10 // num grater than 10
+// // console.log("num is grater than 10")// print " grater than 10"
+// // console.log("num is less than 10")// if num < 10 print num is less than 10
+//
+// let num = 8;
+//
+// num > 10 ? console.log("grater than 10") : console.log("less than 10");
+
+// SWITCH
+
+var pizzaPreference = prompt("What kind of pizza do you like?");
+
+switch(pizzaPreference) {
+    case "pineapple and hot sauce":
+        alert("What a coincidence, that's my favorite!");
+        break;
+    case "cheese":
+        alert("Just plain cheese? Okay...");
+        break;
+    default:
+        alert(pizzaPreference + " isn't my favorite, but let's order some!");
+        break;
+}
