@@ -147,6 +147,25 @@ console.log(analyzeColor());
  * return value.
  */
 
+function calculateTotal(luckynum, retail) {
+    console.log(luckynum)
+    if(luckynum === 0) {
+        return retail
+    } else if(luckynum === 1) {
+        return retail - (.1 * retail);
+    } else if(luckynum === 2) {
+        return retail - (.25 * retail);
+    } else if(luckynum === 3) {
+        return retail - (.35 * retail);
+    } else if(luckynum === 4) {
+        return retail - (.5 * retail);
+    } else {
+        return retail - retail;
+    }
+}
+
+console.log(calculateTotal(1, 100));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -156,7 +175,25 @@ console.log(analyzeColor());
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+let totalBill = parseFloat(prompt("What was your total bill?"));
+function calculateTotal(luckynum, retail) {
+    alert("Your Lucky Number: " + luckynum);
+    if(luckynum === 0) {
+        alert("You didn't save anything, your bill was: $" + retail + ", and still is!")
+    } else if(luckynum === 1) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.1 * retail)));
+    } else if(luckynum === 2) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.25 * retail)));
+    } else if(luckynum === 3) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.35 * retail)));
+    } else if(luckynum === 4) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.5 * retail)));
+    } else {
+        alert("Your bill was: $" + retail + ", but is now: $0.00!!!!");
+    }
+}
+calculateTotal(luckyNumber,totalBill);
 
 /**
  * TODO:
