@@ -95,35 +95,35 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-function analyzeColor() {
-    let color = prompt("What is your favorite color?");
-    console.log(color);
-    switch (color) {
-        case "blue":
-            alert("blue is the color of the sky");
-            break;
-        case "red":
-            alert("Strawberries are red");
-            break;
-        case "indigo":
-            alert("I don't know anything about indigo");
-            break;
-        case "orange":
-            alert("basketballs are orange");
-            break;
-        case "yellow":
-            alert("I think the sun is yellow");
-            break;
-        case "green":
-            alert("green is my favorite color");
-            break;
-        default:
-            alert(color + " is the worst color");
-            break;
-    }
-    return color
-}
-console.log(analyzeColor());
+// function analyzeColor() {
+//     let color = prompt("What is your favorite color?");
+//     console.log(color);
+//     switch (color) {
+//         case "blue":
+//             alert("blue is the color of the sky");
+//             break;
+//         case "red":
+//             alert("Strawberries are red");
+//             break;
+//         case "indigo":
+//             alert("I don't know anything about indigo");
+//             break;
+//         case "orange":
+//             alert("basketballs are orange");
+//             break;
+//         case "yellow":
+//             alert("I think the sun is yellow");
+//             break;
+//         case "green":
+//             alert("green is my favorite color");
+//             break;
+//         default:
+//             alert(color + " is the worst color");
+//             break;
+//     }
+//     return color
+// }
+// console.log(analyzeColor());
 
 /* ########################################################################## */
 
@@ -147,24 +147,24 @@ console.log(analyzeColor());
  * return value.
  */
 
-function calculateTotal(luckynum, retail) {
-    console.log(luckynum)
-    if(luckynum === 0) {
-        return retail
-    } else if(luckynum === 1) {
-        return retail - (.1 * retail);
-    } else if(luckynum === 2) {
-        return retail - (.25 * retail);
-    } else if(luckynum === 3) {
-        return retail - (.35 * retail);
-    } else if(luckynum === 4) {
-        return retail - (.5 * retail);
-    } else {
-        return retail - retail;
-    }
-}
-
-console.log(calculateTotal(1, 100));
+// function calculateTotal(luckynum, retail) {
+//     console.log(luckynum)
+//     if(luckynum === 0) {
+//         return retail
+//     } else if(luckynum === 1) {
+//         return retail - (.1 * retail);
+//     } else if(luckynum === 2) {
+//         return retail - (.25 * retail);
+//     } else if(luckynum === 3) {
+//         return retail - (.35 * retail);
+//     } else if(luckynum === 4) {
+//         return retail - (.5 * retail);
+//     } else {
+//         return retail - retail;
+//     }
+// }
+//
+// console.log(calculateTotal(1, 100));
 
 /**
  * TODO:
@@ -175,25 +175,25 @@ console.log(calculateTotal(1, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-let totalBill = parseFloat(prompt("What was your total bill?"));
-function calculateTotal(luckynum, retail) {
-    alert("Your Lucky Number: " + luckynum);
-    if(luckynum === 0) {
-        alert("You didn't save anything, your bill was: $" + retail + ", and still is!")
-    } else if(luckynum === 1) {
-        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.1 * retail)));
-    } else if(luckynum === 2) {
-        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.25 * retail)));
-    } else if(luckynum === 3) {
-        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.35 * retail)));
-    } else if(luckynum === 4) {
-        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.5 * retail)));
-    } else {
-        alert("Your bill was: $" + retail + ", but is now: $0.00!!!!");
-    }
-}
-calculateTotal(luckyNumber,totalBill);
+// var luckyNumber = Math.floor(Math.random() * 6);
+// let totalBill = parseFloat(prompt("What was your total bill?"));
+// function calculateTotal(luckynum, retail) {
+//     alert("Your Lucky Number: " + luckynum);
+//     if(luckynum === 0) {
+//         alert("You didn't save anything, your bill was: $" + retail + ", and still is!")
+//     } else if(luckynum === 1) {
+//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.1 * retail)));
+//     } else if(luckynum === 2) {
+//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.25 * retail)));
+//     } else if(luckynum === 3) {
+//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.35 * retail)));
+//     } else if(luckynum === 4) {
+//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.5 * retail)));
+//     } else {
+//         alert("Your bill was: $" + retail + ", but is now: $0.00!!!!");
+//     }
+// }
+// calculateTotal(luckyNumber,totalBill);
 
 /**
  * TODO:
@@ -213,3 +213,27 @@ calculateTotal(luckyNumber,totalBill);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+// ask the user if they would like to enter a number
+// if ok --- prompt the user for a number
+        //use 3 seperate alerts to tell user
+                // if num is odd or even
+                // what num + 100 is
+                //if num is positive or negative
+        //if entered = not a number give alert to inform of wrong data entry
+let wouldYouLikeToPlay = confirm("Would you like to enter a number?");
+function numberCheck(x) {
+    if (wouldYouLikeToPlay === true){
+        let letsPlay = parseFloat(prompt("Input a Number"));
+        if (isNaN(wouldYouLikeToPlay)) {
+        alert("This is not a number Guy!");
+        } else {
+            (letsPlay % 2 == 0) ? alert("Your number is even Jack!"): alert("Your number is odd Bob!");
+            (letsPlay >= 0) ? alert("Your number is positive!"): alert("Your number is negative!")
+            alert("This is your number added to 100: " + (letsPlay +100))
+        }
+    }
+        else {
+        alert("I didn't want to play anyway!")
+    }
+}
+numberCheck(wouldYouLikeToPlay);
