@@ -226,13 +226,14 @@ function numberCheck(x) {
         let letsPlay = parseFloat(prompt("Input a Number"));
         if (isNaN(letsPlay)) {
         alert("This is not a number Guy!");
-        } else {
+        }
+        else {
             (letsPlay % 2 == 0) ? alert("Your number is even Jack!"): alert("Your number is odd Bob!");
             (letsPlay >= 0) ? alert("Your number is positive!"): alert("Your number is negative!")
             alert("This is your number added to 100: " + (letsPlay +100))
         }
     }
-        else {
+    else {
         alert("I didn't want to play anyway!")
     }
 }
