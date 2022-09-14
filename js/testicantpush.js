@@ -37,3 +37,5 @@ function and(a, b) {
 function concat(a, b) {
     return a.toString().concat(b.toString());
 }
+
+// finished the practice
