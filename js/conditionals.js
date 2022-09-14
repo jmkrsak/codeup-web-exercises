@@ -224,7 +224,7 @@ let wouldYouLikeToPlay = confirm("Would you like to enter a number?");
 function numberCheck(x) {
     if (wouldYouLikeToPlay === true){
         let letsPlay = parseFloat(prompt("Input a Number"));
-        if (isNaN(wouldYouLikeToPlay)) {
+        if (isNaN(letsPlay)) {
         alert("This is not a number Guy!");
         } else {
             (letsPlay % 2 == 0) ? alert("Your number is even Jack!"): alert("Your number is odd Bob!");
