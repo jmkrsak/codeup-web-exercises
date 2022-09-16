@@ -521,4 +521,130 @@
 //         break;
 // }
 
-// LOOP
+// LOOPS
+//Cautionary note:
+//if console goes crazy CLOSE CLOSE CLOSE
+
+//WHILE
+//The condition is evaluated First and then runs
+
+//while(condition){ //instruction }
+
+//while(true)
+
+// let password = prompt("welcome to the website - please enter your password");
+//
+// while(password !== "correctPassword"){
+//     alert("Incorrect password! Please try again!");
+//
+//     password = prompt("Please try to enter your password again");
+// }
+// let notNiceEnough = confirm("Do you think the weather outside is nice enough to go out in?");
+//
+// while(notNiceEnough){
+//     alert("I REALLY WANT TO GO OUTSIDE - are you SURE?");
+//     notNiceEnough = confirm("Do you think it's true that the weather outside is nice enough to go out in?")
+// }
+
+// let wearingHat = true
+//
+// alert("We are not doing hats today - you need to take it off to come in.");
+//
+// while(wearingHat){
+//     wearingHat = confirm("Do I leave my hat on and keep my true self?!");
+// }
+
+// var i = 0;
+//
+// while (i < 10) {
+//     console.log('while loop iteration #' + i);
+//     i++;
+// }
+
+
+//Do-While
+//The code will always be executed at least once regardless of the condition being true
+
+// let i = 0;
+// do{
+//     console.log("Do some stuff as long as i was below zero!")
+// } while (i < 0);
+// while(i < 0){
+//     console.log("Hello!")
+// }
+
+// let wanToTalkToSalesPerson = false;
+//
+// do {
+//     alert("Welcome to car store, what are you looking for?");
+//     wanToTalkToSalesPerson = confirm("Are you ready to buy?");
+// } while (wanToTalkToSalesPerson);
+
+
+//For Loop
+//for(init; condition; incrementation){
+//code to ex
+//}
+
+// good for code to varify admin
+// for(let i = 0; i < 10; i++){
+//     alert("Hey 'i' - what number value is inside of you now? i says: " + i);
+// }
+
+//max occupancy for Store is 20 cx
+//our
+// for(let numCustomer = 0; numCustomer <= 20; numCustomer++){
+//     alert ("Customer arrived! Number of customers in house is now " + numCustomer);
+// }
+
+// let fullName = "Kenneth";
+//
+// for (let i = 0; i < fullName.length; i++){
+//     console.log("Here's a cool letter form my name " + fullName[i])
+// }
+//
+// let userFirstName = prompt("What is your first name user?")
+//
+// for (let i = 0; i < userFirstName.length; i++){
+//     alert("Here's a letter from your name : " + userFirstName[i]);
+// }
+
+
+//Break? Continue? How did I use them in a loop?
+
+//These are key words
+// breal will be read as "exit" the loop
+//continue
+
+// for(let i = 0; i < 10; i++){
+//     alert("i is currently: " + i);
+//     if(i === 5){
+//         alert("Stopping at 5");
+//         break;
+//     }
+// }
+
+// for(let i = 0; i < 10; i++){
+//     alert("i is currently: " + i);
+//     if(i === 5){
+//         alert("5 is cool");
+//         continue;
+//     }
+// }
+
+// for(let i = 0; i < 10; i++){
+//     console.log("loop has run x times : " + i);
+//
+//     if(i % 2 === 0){
+//         alert("Here's a cool even number: " + i);
+//         continue;
+//     }
+// }
+
+//Let's pop this in a function to see it work
+
+function countTimes(number){
+    for(let i = 0; i < number; i++){
+        alert("Counting up to your number of " + number + ". We are currently on the number" + i);
+    }
+}
