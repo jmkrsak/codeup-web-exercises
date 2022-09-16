@@ -86,6 +86,10 @@ console.log(string);
 // 10
 // 5
 
-for (var i = 1; i <= 20; i++) {
-    console.log(i * 5);
+// for (let i = 0; i < 20; i++) {
+//     console.log(100 - (i * 5));
+// }
+
+for (let i = 100; i > 5; i -= 5) {
+    console.log(i);
 }
