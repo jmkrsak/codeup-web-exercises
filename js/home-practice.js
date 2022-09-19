@@ -724,3 +724,90 @@ for(let i = 1; i < 10; i++){
     console.log(str);
 }
 
+// Create a for loop that uses console.log to create the output shown below.
+//
+//
+// 100
+// 95
+// 90
+// 85
+// 80
+// 75
+// 70
+// 65
+// 60
+// 55
+// 50
+// 45
+// 40
+// 35
+// 30
+// 25
+// 20
+// 15
+// 10
+// 5
+
+for(let i = 100; i > 0; i-= 5){
+    console.log(i);
+}
+
+//     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
+//     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+//     Your output should look like this:
+//
+//
+// Number to skip is: 27
+//
+// Here is an odd number: 1
+// Here is an odd number: 3
+// Here is an odd number: 5
+// Here is an odd number: 7
+// Here is an odd number: 9
+// Here is an odd number: 11
+// Here is an odd number: 13
+// Here is an odd number: 15
+// Here is an odd number: 17
+// Here is an odd number: 19
+// Here is an odd number: 21
+// Here is an odd number: 23
+// Here is an odd number: 25
+// Yikes! Skipping number: 27
+// Here is an odd number: 29
+// Here is an odd number: 31
+// Here is an odd number: 33
+// Here is an odd number: 35
+// Here is an odd number: 37
+// Here is an odd number: 39
+// Here is an odd number: 41
+// Here is an odd number: 43
+// Here is an odd number: 45
+// Here is an odd number: 47
+// Here is an odd number: 49
+
+// Create a while loop that uses console.log() to create the output shown below.
+//
+//
+// 2
+// 4
+// 8
+// 16
+// 32
+// 64
+// 128
+// 256
+// 512
+// 1024
+// 2048
+// 4096
+// 8192
+// 16384
+// 32768
+// 65536
+
+let number = 2
+
+while(number <= 65536){
+    console.log(number);
+    number = number * 2;
+}
