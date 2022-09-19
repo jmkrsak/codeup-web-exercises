@@ -887,4 +887,50 @@
 //     console.log(`Have you ever been to ${city} before?`)
 // }
 
+// MANIPULATING ARRAYS
 
+let animals = ['frog', 'bat', 'camel', 'bumble bee', 'wombat'];
+
+// let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
+
+let favoriets = ['pizza', 18, 'autumn', 2016, ['peperoni & jalapenos',]]
+
+//adding movies
+
+//methods - functions that are attached to an object
+//forEach()
+
+//push() --> add an element to the end of an array
+//Kiley's favorite animal is dog
+//arrayYouWantToAddTo.push('dog')
+
+console.log(animals);
+animals.push('dog');
+console.log(animals);
+
+animals.push('cat', 'giraffe', 'human');
+console.log(animals);
+
+let places = ['mcdonalds', 'texas', 'the ocean', 'my house', ['berlin', 'london', 'prague']];
+
+let zoo = ["zebra", "lion", "dolphin", ["cricket", "bees", "butterflys"], "wombat"];
+
+zoo.push('mouse');
+
+//unshift
+
+zoo.unshift("frog");
+
+//removing movies
+
+//.pop() --> removes last element from an array
+// pixarMovies.pop('up');
+let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
+
+let removedMovie = pixarMovies.pop()
+console.log('removedMovie:', removedMovie);
+
+
+
+//accessing movies
+//nameOfArray[indexOfTheElYouWantToAccess]
