@@ -1,11 +1,13 @@
 (function(){
     "use strict";
-console.log("sanity check")
+
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+
+   var names = ["Jak", "Jasmine", "John", "Sunny"]
 
     /**
      * TODO:
@@ -13,11 +15,18 @@ console.log("sanity check")
      * array.
      */
 
+    console.log(names.length);
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -25,10 +34,18 @@ console.log("sanity check")
      * array.
      */
 
+    for(let i = 0; i < names.length; i++){
+        console.log(names[i]);
+    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(element) {
+        console.log(element)
+    })
 
     /**
      * TODO:
@@ -43,5 +60,22 @@ console.log("sanity check")
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    var colors = ["Blue", "Green", "Yellow", "Red", "Black"]
+
+    function firstElement(array){
+        return array[0];
+    }
+    console.log(firstElement(colors));
+
+    function secondElement(array){
+        return array[1];
+    }
+    console.log(secondElement(colors));
+
+    function lastElement(array){
+        return array[array.length - 1];
+    }
+    console.log(lastElement(colors));
 
 })();
