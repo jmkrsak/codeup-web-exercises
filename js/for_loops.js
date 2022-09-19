@@ -33,7 +33,7 @@ showMultiplicationTable(7)
 
 for (var i = 0; i < 10; i++) {
     var random20To200 = Math.floor(Math.random() * 200) + 20;
-    if (random20To200 % 2 === 0){
+    if (random20To200 % 2 === 0) {
         console.log("Hey " + random20To200 + " is even!")
     } else {
         console.log("Hey " + random20To200 + " is odd!")
