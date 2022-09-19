@@ -7,7 +7,8 @@
      * 'names'.
      */
 
-   var names = ["Jak", "Jasmine", "John", "Sunny"]
+   var names = ["Jak", "Jasmine", "John", "Sunny"];
+   console.log(names);
 
     /**
      * TODO:

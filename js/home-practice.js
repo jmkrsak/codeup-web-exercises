@@ -825,7 +825,7 @@
 //
 // //Power arrives first by combininb the above with a var - now were slapping a LABLE onto the array
 
-let lunchItems = ["apple and banana", "steak", "chicken", "fish"]
+// let lunchItems = ["apple and banana", "steak", "chicken", "fish"]
 
 //what is the FIRST ELEMENT of my array?
 //At the ZERO INDEX we have a STRING LITERAL of "apple and banana"
@@ -833,26 +833,26 @@ let lunchItems = ["apple and banana", "steak", "chicken", "fish"]
 //In english: "Javascript, how many items do you have inside an array labled "x"?
 //.length
 
-console.log("How many elements [items] are in an array called lunchItems?");
+// console.log("How many elements [items] are in an array called lunchItems?");
 
-console.log(lunchItems.length);
+// console.log(lunchItems.length);
 
-let citiesInTexas = ["san", "austin", "waco", "dallas", "houston", "fort worth"]
-
-console.log(citiesInTexas.length);
+// let citiesInTexas = ["san", "austin", "waco", "dallas", "houston", "fort worth"]
+//
+// console.log(citiesInTexas.length);
 
 //How would i get ONE ELEMENT [item] out of my array?
 //How to access an element: We refer to it by index
 
-console.log(citiesInTexas[4]);
+// console.log(citiesInTexas[4]);
 
 //What if i wanted to go through each part [each element] of my array one by one somehow
 //Iterate with my arrays: [for loops] and we have some NEW OPTIONS
 
-for(let i = 0; i < citiesInTexas.length; i++){
-    console.log("Heres a cool town in Texas");
-    console.log(citiesInTexas[i]);
-}
+// for(let i = 0; i < citiesInTexas.length; i++){
+//     console.log("Heres a cool town in Texas");
+//     console.log(citiesInTexas[i]);
+// }
 
 //.forEach - takes in a call back function [function expression or anpnymous function in var] looking for at least what "element" in the internal function we're working with
 
@@ -860,19 +860,19 @@ for(let i = 0; i < citiesInTexas.length; i++){
 //  // ...
 // })
 
-citiesInTexas.forEach(function(element){
-    console.log("Heres a cool city in Texas " + element);
-})
+// citiesInTexas.forEach(function(element){
+//     console.log("Heres a cool city in Texas " + element);
+// })
 
-let favorietNumbers = [7,13,222]
+// let favorietNumbers = [7,13,222]
 
 // favorietNumbers.forEach(function(num){
 //     console.log(typeof num);
 // })
 
-favorietNumbers.forEach(function(number, index){
-    console.log("Current index is: " + index + " and the data type was " + typeof number)
-})
+// favorietNumbers.forEach(function(number, index){
+//     console.log("Current index is: " + index + " and the data type was " + typeof number)
+// })
 
 
 
@@ -883,8 +883,8 @@ favorietNumbers.forEach(function(number, index){
 // console.log(element);
 //}
 
-for (let city of citiesInTexas){
-    console.log(`Have you ever been to ${city} before?`)
-}
+// for (let city of citiesInTexas){
+//     console.log(`Have you ever been to ${city} before?`)
+// }
 
 
