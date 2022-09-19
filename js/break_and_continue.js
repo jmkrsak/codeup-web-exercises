@@ -20,17 +20,30 @@
 
 let oddNum = parseInt(prompt("Input an Odd Number between 1 and 50."));
 console.log("The number chosen was: "+oddNum);
+
+while(true) {
+    if(oddNum % 2 !== 0 && oddNum < 50 && oddNum > 1) {
+        break;
+    }
+    alert("This is not a vaild number, you didn't follow the rules!");
+    oddNum = parseInt(prompt("Input an Odd Number between 1 and 50."));
+    console.log("The number chosen was: "+oddNum);
+}
+
 for (let i = 1; i < 50; i+=2) {
-    while((oddNum % 2 === 0 || oddNum > 50 || oddNum < 1)) {
-        alert("This is not a vaild number, you didn't follow the rules!");
-        oddNum = parseInt(prompt("Input an Odd Number between 1 and 50."));
-        console.log("The number chosen was: "+oddNum);
+    if(i === oddNum) {
+        console.log("Yikes! Skipping number: " + oddNum)
         continue;
-    }while(i === oddNum){
-        console.log("Yikes! Skipping number: "+ oddNum);         break;
-    }if(i !== oddNum){
-        console.log("here is and odd number: "+ i);
-    } }
+    }
+    console.log("Here's an odd number: " + i);
+}
+    // while(i === oddNum){
+    //
+    //     console.log("Yikes! Skipping number: "+ oddNum);         break;
+    // }if(i !== oddNum){
+    //     console.log("Here is an odd number: "+ i);
+    // }
+// }
 
 // let oddNum = parseInt(prompt("Input an Odd Number between 1 and 50."));
 // console.log("The number chosen was: "+oddNum);
