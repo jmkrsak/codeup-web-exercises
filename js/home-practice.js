@@ -649,3 +649,17 @@
 //     }
 // }
 
+//function showMultiplactionTable
+//"a number" - one parameter
+//console.log the table for that number
+console.log("sanity check");
+
+function showMultiplactionTable(number){
+    //First step- can i console.log numbers between 1 -10?
+    for(let i = 1; i <= 10; i++){
+        // console.log(number + " x " + i + " = " + (number * i));
+        console.log(`${number} x ${i} = ${number * i}`);
+    }
+}
+
+showMultiplactionTable(7);
