@@ -663,3 +663,64 @@ function showMultiplactionTable(number){
 }
 
 showMultiplactionTable(7);
+
+// Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:
+//
+//
+//     123 is odd
+// 80 is even
+// 24 is even
+// 199 is odd
+// ...
+
+//first step- can i output 10 random numbers
+//second step- can i filter those 10 random numbers odd or even
+//third step - can i filter even numbers
+//4th - can i filter odd numbers
+for(let i = 1; i <= 10; i++){
+
+    let randomNum = Math.floor(Math.random() * (200 - 20) ) + 20;
+
+    if(randomNum % 2 ===0){
+        console.log("Here's an even number: " + randomNum);
+    } else {
+        console.log("Here is an odd number: " + randomNum);
+    }
+
+}
+
+// Create a for loop that uses console.log to create the output shown below.
+//
+//
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+//repeat
+
+for(let i = 1; i < 10; i++){
+
+    console.log(i.toString().repeat(i));
+
+}
+
+//nested loop path
+
+for(let i = 1; i < 10; i++){
+
+    let str = "";
+
+    for(let j = 0; j < i; j++){
+        str = str + i;
+
+    }
+
+    console.log(str);
+}
+
