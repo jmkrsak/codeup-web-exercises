@@ -21,6 +21,7 @@
 // 65536
 
 let pow = 0;
+
 while (Math.pow(2, pow) < Math.pow(2, 16)) {
     console.log(Math.pow(2, ++pow));
 }
@@ -39,7 +40,9 @@ while (Math.pow(2, pow) < Math.pow(2, 16)) {
 // Yay! I sold them all! // If there are no more cones
 
 let conesToSell = Math.floor(50 + Math.random() * (100 - 50 + 1));
+
 console.log(`I have to sell ${conesToSell} cones`);
+
 do {
     let customerWants = Math.floor(Math.random() * (100 - 50 + 1));
     if(conesToSell < customerWants) {

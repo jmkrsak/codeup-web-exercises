@@ -643,8 +643,9 @@
 
 //Let's pop this in a function to see it work
 
-function countTimes(number){
-    for(let i = 0; i < number; i++){
-        alert("Counting up to your number of " + number + ". We are currently on the number" + i);
-    }
-}
+// function countTimes(number){
+//     for(let i = 0; i < number; i++){
+//         alert("Counting up to your number of " + number + ". We are currently on the number" + i);
+//     }
+// }
+
