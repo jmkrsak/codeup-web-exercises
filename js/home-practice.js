@@ -652,17 +652,17 @@
 //function showMultiplactionTable
 //"a number" - one parameter
 //console.log the table for that number
-console.log("sanity check");
-
-function showMultiplactionTable(number){
-    //First step- can i console.log numbers between 1 -10?
-    for(let i = 1; i <= 10; i++){
-        // console.log(number + " x " + i + " = " + (number * i));
-        console.log(`${number} x ${i} = ${number * i}`);
-    }
-}
-
-showMultiplactionTable(7);
+// console.log("sanity check");
+//
+// function showMultiplactionTable(number){
+//     //First step- can i console.log numbers between 1 -10?
+//     for(let i = 1; i <= 10; i++){
+//         // console.log(number + " x " + i + " = " + (number * i));
+//         console.log(`${number} x ${i} = ${number * i}`);
+//     }
+// }
+//
+// showMultiplactionTable(7);
 
 // Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:
 //
@@ -677,17 +677,17 @@ showMultiplactionTable(7);
 //second step- can i filter those 10 random numbers odd or even
 //third step - can i filter even numbers
 //4th - can i filter odd numbers
-for(let i = 1; i <= 10; i++){
-
-    let randomNum = Math.floor(Math.random() * (200 - 20) ) + 20;
-
-    if(randomNum % 2 ===0){
-        console.log("Here's an even number: " + randomNum);
-    } else {
-        console.log("Here is an odd number: " + randomNum);
-    }
-
-}
+// for(let i = 1; i <= 10; i++){
+//
+//     let randomNum = Math.floor(Math.random() * (200 - 20) ) + 20;
+//
+//     if(randomNum % 2 ===0){
+//         console.log("Here's an even number: " + randomNum);
+//     } else {
+//         console.log("Here is an odd number: " + randomNum);
+//     }
+//
+// }
 
 // Create a for loop that uses console.log to create the output shown below.
 //
@@ -704,25 +704,25 @@ for(let i = 1; i <= 10; i++){
 
 //repeat
 
-for(let i = 1; i < 10; i++){
-
-    console.log(i.toString().repeat(i));
-
-}
+// for(let i = 1; i < 10; i++){
+//
+//     console.log(i.toString().repeat(i));
+//
+// }
 
 //nested loop path
 
-for(let i = 1; i < 10; i++){
-
-    let str = "";
-
-    for(let j = 0; j < i; j++){
-        str = str + i;
-
-    }
-
-    console.log(str);
-}
+// for(let i = 1; i < 10; i++){
+//
+//     let str = "";
+//
+//     for(let j = 0; j < i; j++){
+//         str = str + i;
+//
+//     }
+//
+//     console.log(str);
+// }
 
 // Create a for loop that uses console.log to create the output shown below.
 //
@@ -748,9 +748,9 @@ for(let i = 1; i < 10; i++){
 // 10
 // 5
 
-for(let i = 100; i > 0; i-= 5){
-    console.log(i);
-}
+// for(let i = 100; i > 0; i-= 5){
+//     console.log(i);
+// }
 
 //     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
@@ -805,9 +805,53 @@ for(let i = 100; i > 0; i-= 5){
 // 32768
 // 65536
 
-let number = 2
+// let number = 2
+//
+// while(number <= 65536){
+//     console.log(number);
+//     number = number * 2;
+// }
 
-while(number <= 65536){
-    console.log(number);
-    number = number * 2;
+//ARRAY - a data strcuture, orginized, has a 0 --> wherever we stop adding things in
+
+//Javascript arrays can contain any combo of primitives or objects into an array -- dont have to only have numbers or only strings
+
+//Array `literal` - straight bracket notation []
+
+// // [] empty
+// [1,2,3,4,5] //all numbers array literal
+//
+// [true, `java cohort`, 1230, [1,'2', "three", true]] //Combining all kinds of data - even an array inside an array
+//
+// //Power arrives first by combininb the above with a var - now were slapping a LABLE onto the array
+
+let lunchItems = ["apple and banana", "steak", "chicken", "fish"]
+
+//what is the FIRST ELEMENT of my array?
+//At the ZERO INDEX we have a STRING LITERAL of "apple and banana"
+
+//In english: "Javascript, how many items do you have inside an array labled "x"?
+//.length
+
+console.log("How many elements [items] are in an array called lunchItems?");
+
+console.log(lunchItems.length);
+
+let citiesInTexas = ["san", "austin", "waco", "dallas", "houston", "fort worth"]
+
+console.log(citiesInTexas.length);
+
+//How would i get ONE ELEMENT [item] out of my array?
+//How to access an element: We refer to it by index
+
+console.log(citiesInTexas[4]);
+
+//What if i wanted to go through each part [each element] of my array one by one somehow
+//Iterate with my arrays: [for loops] and we have some NEW OPTIONS
+
+for(let i = 0; i < citiesInTexas.length; i++){
+    console.log("Heres a cool town in Texas");
+    console.log(citiesInTexas[i]);
 }
+
+
