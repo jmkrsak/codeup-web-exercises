@@ -854,4 +854,37 @@ for(let i = 0; i < citiesInTexas.length; i++){
     console.log(citiesInTexas[i]);
 }
 
+//.forEach - takes in a call back function [function expression or anpnymous function in var] looking for at least what "element" in the internal function we're working with
+
+//someArray.forEach(function(element, index, array) {
+//  // ...
+// })
+
+citiesInTexas.forEach(function(element){
+    console.log("Heres a cool city in Texas " + element);
+})
+
+let favorietNumbers = [7,13,222]
+
+// favorietNumbers.forEach(function(num){
+//     console.log(typeof num);
+// })
+
+favorietNumbers.forEach(function(number, index){
+    console.log("Current index is: " + index + " and the data type was " + typeof number)
+})
+
+
+
+//forOf
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference?Statements?for...of
+
+//for (let element of array1) {
+// console.log(element);
+//}
+
+for (let city of citiesInTexas){
+    console.log(`Have you ever been to ${city} before?`)
+}
+
 
