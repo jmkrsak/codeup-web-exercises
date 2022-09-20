@@ -26,4 +26,12 @@
      * string, and <li> tags around each planet.
      */
 
+    var newPlanetsString = "<br>Mercury</br> <br>Venus</br> <br>Earth</br> <br>Mars</br> <br>Jupiter</br> <br>Saturn</br> <br>Uranus</br> <br>Neptune</br>";
+
+    console.log(newPlanetsString);
+
+    var unorderedPlanetsString = "<ul><li>'Mercury'</li>, <li>'Venus'</li>, <li>'Earth'</li>, <li>'Mars'</li>, <li>'Jupiter'</li>, <li>'Saturn'</li>, <li>'Uranus'</li>, <li>'Neptune'</li></ul>";
+
+    console.log(unorderedPlanetsString);
+
 })();
