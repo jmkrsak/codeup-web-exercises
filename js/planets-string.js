@@ -26,7 +26,7 @@
      * string, and <li> tags around each planet.
      */
 
-    var newPlanetsString = "<br>Mercury</br> <br>Venus</br> <br>Earth</br> <br>Mars</br> <br>Jupiter</br> <br>Saturn</br> <br>Uranus</br> <br>Neptune</br>";
+    var newPlanetsString = "Mercury"<br> "Venus"<br> "Earth"<br> "Mars"<br> "Jupiter"<br> "Saturn"<br> "Uranus"<br> "Neptune"<br>
 
     console.log(newPlanetsString);
 
