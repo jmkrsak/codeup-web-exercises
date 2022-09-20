@@ -925,12 +925,52 @@ zoo.unshift("frog");
 
 //.pop() --> removes last element from an array
 // pixarMovies.pop('up');
-let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
-
-let removedMovie = pixarMovies.pop()
-console.log('removedMovie:', removedMovie);
+// let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
+//
+// let removedMovie = pixarMovies.pop()
+// console.log('removedMovie:', removedMovie);
 
 
 
 //accessing movies
 //nameOfArray[indexOfTheElYouWantToAccess]
+
+//Slicing ARRAYS
+// let breakfastFood = ['tacos', 'donuts', 'bagels', 'eggs', 'toast', 'pizza'];
+// breakfastFood.slice(2, 4);
+//what gets returned?
+
+//write a function that prints "I love ___ for breakfast"
+//write a function
+//pass in ? parameters -> yes, 1 parameter
+//pass in argument -> the new array
+//call the function
+//inside the function?
+//console.log() -> each breakfast item
+
+
+// function foodILove(foods) {
+//     console.log(foods);
+//     //iterate through the array of foods ->
+//         //print "I love" + eachFoodItem + "for breakfast"
+//     foods.forEach(function(food){
+//         console.log("I love " + food + " for breakfast")
+//     })
+// }
+//
+// foodILove(breakfastFood)
+
+//REVERSING ARRAY
+// let nums = [1,2,3,4,5,6,7,8,9,0]
+// nums.reverse()
+//-> does change the original array
+
+//SORTING ARRAYS
+
+// let num = [2,3,5,6,9,1]
+// num.sort();
+
+//SPLITTING ARRAYS
+
+// let myFullName = "john jacob jingle heimel schmidt"
+// myFullName.split(" ")

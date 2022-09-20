@@ -26,11 +26,11 @@
      * string, and <li> tags around each planet.
      */
 
-    var newPlanetsString = "Mercury"<br> "Venus"<br> "Earth"<br> "Mars"<br> "Jupiter"<br> "Saturn"<br> "Uranus"<br> "Neptune"<br>
+    var newPlanetsString = planetsArray.join("<br>");
 
     console.log(newPlanetsString);
 
-    var unorderedPlanetsString = "<ul><li>'Mercury'</li>, <li>'Venus'</li>, <li>'Earth'</li>, <li>'Mars'</li>, <li>'Jupiter'</li>, <li>'Saturn'</li>, <li>'Uranus'</li>, <li>'Neptune'</li></ul>";
+    var unorderedPlanetsString = "<ul>" + "<li>" + planetsArray.join("</li><li>") + "</li>" + "</ul>";
 
     console.log(unorderedPlanetsString);
 
