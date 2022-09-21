@@ -20,24 +20,24 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// function analyzeColor(color) {
-//     if (color === "blue") {
-//         return "blue is the color of the sky";
-//     } else if (color === "red") {
-//         return "Strawberries are red";
-//     } else if (color === "indigo") {
-//         return "I don't know anything about indigo";
-//     } else if (color === "orange") {
-//         return "basketballs are orange";
-//     } else if (color === "yellow") {
-//         return "I think the sun is yellow";
-//     } else if (color === "green") {
-//         return "green is my favorite color";
-//     } else {
-//         return color + " is the worst color!!!";
-//     }
-// }
-// console.log(analyzeColor("blue"));
+function analyzeColor(color) {
+    if (color === "blue") {
+        return "blue is the color of the sky";
+    } else if (color === "red") {
+        return "Strawberries are red";
+    } else if (color === "indigo") {
+        return "I don't know anything about indigo";
+    } else if (color === "orange") {
+        return "basketballs are orange";
+    } else if (color === "yellow") {
+        return "I think the sun is yellow";
+    } else if (color === "green") {
+        return "green is my favorite color";
+    } else {
+        return color + " is the worst color!!!";
+    }
+}
+console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -52,7 +52,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-// console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -60,33 +60,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
-// let color = prompt("What is your favorite color?");
-//
-//     switch (color) {
-//         case "blue":
-//             alert("blue is the color of the sky");
-//             break;
-//         case "red":
-//             alert("Strawberries are red");
-//             break;
-//         case "indigo":
-//             alert("I don't know anything about indigo");
-//             break;
-//         case "orange":
-//             alert("basketballs are orange");
-//             break;
-//         case "yellow":
-//             alert("I think the sun is yellow");
-//             break;
-//         case "green":
-//             alert("green is my favorite color");
-//             break;
-//         default:
-//             alert(color + " is the worst color");
-//             break;
-//     }
-//
-// console.log(color);
+let color = prompt("What is your favorite color?");
+
+    switch (color) {
+        case "blue":
+            alert("blue is the color of the sky");
+            break;
+        case "red":
+            alert("Strawberries are red");
+            break;
+        case "indigo":
+            alert("I don't know anything about indigo");
+            break;
+        case "orange":
+            alert("basketballs are orange");
+            break;
+        case "yellow":
+            alert("I think the sun is yellow");
+            break;
+        case "green":
+            alert("green is my favorite color");
+            break;
+        default:
+            alert(color + " is the worst color");
+            break;
+    }
+
+console.log(color);
 
 /**
  * TODO:
@@ -95,35 +95,35 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-// function analyzeColor() {
-//     let color = prompt("What is your favorite color?");
-//     console.log(color);
-//     switch (color) {
-//         case "blue":
-//             alert("blue is the color of the sky");
-//             break;
-//         case "red":
-//             alert("Strawberries are red");
-//             break;
-//         case "indigo":
-//             alert("I don't know anything about indigo");
-//             break;
-//         case "orange":
-//             alert("basketballs are orange");
-//             break;
-//         case "yellow":
-//             alert("I think the sun is yellow");
-//             break;
-//         case "green":
-//             alert("green is my favorite color");
-//             break;
-//         default:
-//             alert(color + " is the worst color");
-//             break;
-//     }
-//     return color
-// }
-// console.log(analyzeColor());
+function analyzeColor() {
+    let color = prompt("What is your favorite color?");
+    console.log(color);
+    switch (color) {
+        case "blue":
+            alert("blue is the color of the sky");
+            break;
+        case "red":
+            alert("Strawberries are red");
+            break;
+        case "indigo":
+            alert("I don't know anything about indigo");
+            break;
+        case "orange":
+            alert("basketballs are orange");
+            break;
+        case "yellow":
+            alert("I think the sun is yellow");
+            break;
+        case "green":
+            alert("green is my favorite color");
+            break;
+        default:
+            alert(color + " is the worst color");
+            break;
+    }
+    return color
+}
+console.log(analyzeColor());
 
 /* ########################################################################## */
 
@@ -147,24 +147,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-// function calculateTotal(luckynum, retail) {
-//     console.log(luckynum)
-//     if(luckynum === 0) {
-//         return retail
-//     } else if(luckynum === 1) {
-//         return retail - (.1 * retail);
-//     } else if(luckynum === 2) {
-//         return retail - (.25 * retail);
-//     } else if(luckynum === 3) {
-//         return retail - (.35 * retail);
-//     } else if(luckynum === 4) {
-//         return retail - (.5 * retail);
-//     } else {
-//         return retail - retail;
-//     }
-// }
-//
-// console.log(calculateTotal(1, 100));
+function calculateTotal(luckynum, retail) {
+    console.log(luckynum)
+    if(luckynum === 0) {
+        return retail
+    } else if(luckynum === 1) {
+        return retail - (.1 * retail);
+    } else if(luckynum === 2) {
+        return retail - (.25 * retail);
+    } else if(luckynum === 3) {
+        return retail - (.35 * retail);
+    } else if(luckynum === 4) {
+        return retail - (.5 * retail);
+    } else {
+        return retail - retail;
+    }
+}
+
+console.log(calculateTotal(1, 100));
 
 /**
  * TODO:
@@ -175,25 +175,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-// let totalBill = parseFloat(prompt("What was your total bill?"));
-// function calculateTotal(luckynum, retail) {
-//     alert("Your Lucky Number: " + luckynum);
-//     if(luckynum === 0) {
-//         alert("You didn't save anything, your bill was: $" + retail + ", and still is!")
-//     } else if(luckynum === 1) {
-//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.1 * retail)));
-//     } else if(luckynum === 2) {
-//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.25 * retail)));
-//     } else if(luckynum === 3) {
-//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.35 * retail)));
-//     } else if(luckynum === 4) {
-//         alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.5 * retail)));
-//     } else {
-//         alert("Your bill was: $" + retail + ", but is now: $0.00!!!!");
-//     }
-// }
-// calculateTotal(luckyNumber,totalBill);
+var luckyNumber = Math.floor(Math.random() * 6);
+let totalBill = parseFloat(prompt("What was your total bill?"));
+function calculateTotal(luckynum, retail) {
+    alert("Your Lucky Number: " + luckynum);
+    if(luckynum === 0) {
+        alert("You didn't save anything, your bill was: $" + retail + ", and still is!")
+    } else if(luckynum === 1) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.1 * retail)));
+    } else if(luckynum === 2) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.25 * retail)));
+    } else if(luckynum === 3) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.35 * retail)));
+    } else if(luckynum === 4) {
+        alert("Your bill was: $" + retail + ", but is now: $" + (retail - (.5 * retail)));
+    } else {
+        alert("Your bill was: $" + retail + ", but is now: $0.00!!!!");
+    }
+}
+calculateTotal(luckyNumber,totalBill);
 
 /**
  * TODO:
