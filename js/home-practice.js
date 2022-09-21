@@ -889,11 +889,11 @@
 
 // MANIPULATING ARRAYS
 
-let animals = ['frog', 'bat', 'camel', 'bumble bee', 'wombat'];
-
-// let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
-
-let favoriets = ['pizza', 18, 'autumn', 2016, ['peperoni & jalapenos',]]
+// let animals = ['frog', 'bat', 'camel', 'bumble bee', 'wombat'];
+//
+// // let pixarMovies = ['up', 'a bug\'s life', 'toy story', 'monster\'s inc'];
+//
+// let favoriets = ['pizza', 18, 'autumn', 2016, ['peperoni & jalapenos',]]
 
 //adding movies
 
@@ -904,22 +904,22 @@ let favoriets = ['pizza', 18, 'autumn', 2016, ['peperoni & jalapenos',]]
 //Kiley's favorite animal is dog
 //arrayYouWantToAddTo.push('dog')
 
-console.log(animals);
-animals.push('dog');
-console.log(animals);
-
-animals.push('cat', 'giraffe', 'human');
-console.log(animals);
-
-let places = ['mcdonalds', 'texas', 'the ocean', 'my house', ['berlin', 'london', 'prague']];
-
-let zoo = ["zebra", "lion", "dolphin", ["cricket", "bees", "butterflys"], "wombat"];
-
-zoo.push('mouse');
-
-//unshift
-
-zoo.unshift("frog");
+// console.log(animals);
+// animals.push('dog');
+// console.log(animals);
+//
+// animals.push('cat', 'giraffe', 'human');
+// console.log(animals);
+//
+// let places = ['mcdonalds', 'texas', 'the ocean', 'my house', ['berlin', 'london', 'prague']];
+//
+// let zoo = ["zebra", "lion", "dolphin", ["cricket", "bees", "butterflys"], "wombat"];
+//
+// zoo.push('mouse');
+//
+// //unshift
+//
+// zoo.unshift("frog");
 
 //removing movies
 
