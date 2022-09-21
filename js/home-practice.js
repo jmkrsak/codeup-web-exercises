@@ -974,3 +974,43 @@
 
 // let myFullName = "john jacob jingle heimel schmidt"
 // myFullName.split(" ")
+
+// Area of a Triangle: Write a JavaScript function that accepts the 3 lengths of a triangle and outputs the triangle’s area.
+
+// function areaOfATriangle (a, b, c){
+//     let s = (a + b + c) / 2;
+//     console.log(s);
+//     let dataToSquare = s * (s - a) * (s - b) * (s - c);
+//     console.log(dataToSquare);
+//     return Math.sqrt(dataToSquare);
+// }
+//
+// // Reverse a String: Write a JS function that accepts a string and returns the string in reverse. example input: codeup, example output: puedoc
+//
+// function reverseString(string) {
+//     return string.split("").reverse().join("");
+// }
+//
+// // FizzBuzz Activity: Print numbers 1-100. If # is divisible by 3 print Fizz. If # is divisible by 5 print Buzz. If # is divisible by both 3 and 5 print FizzBuzz
+//
+// for (i = 1; i < 100; i++) {
+//     if (i % 3 == 0 && i % 5 != 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 == 0 && i % 3 != 0) {
+//         console.log("Buzz");
+//     } else if (i % 3 == 0 && i % 5 == 0) {
+//         console.log("FizzBuzz");
+//     } else {
+//         console.log(i)
+//     }
+// }
+//
+// // Shuffle an array: Write a function to shuffle an array to a completely and entirely random order.
+//
+// function shuffleArray(array) {
+//     return array.sort(() => Math.random() - 0.5);
+// }
+
+//OBJECTS
+
+
