@@ -111,3 +111,7 @@ let airplane = {
 
 //METHODS --> functions that live inside of objects
 
+//----MATH----
+
+
+
