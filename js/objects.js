@@ -106,6 +106,7 @@
                 lastname: "Proust",
             }}
     ];
+console.log(books);
 
     books.forEach(function(book){
         console.log(book.title + " is the title of this book");
@@ -157,5 +158,16 @@
 
 
 
+    function createBook(tit, fn, ln){
+        console.log(tit, fn, ln);
+        return books.push(
+            {title: tit,
+                author: {
+                    firstname: fn,
+                    lastname: ln,
+                }
+        })
+    }
+createBook("food", "John", "Michael");
 })();
 
