@@ -18,18 +18,27 @@
 //----------//
 
 // Define a function named timesFour that takes in an input and multiples that input by four if it is numeric. If the input is not numeric, then return false.
-// timesFour(0) //0
-// timesFour("5") //20
-// timesFour(-5) //-20
-// timesFour('Texas') //false
-// timesFour([2,1,0]) //false
-// timesFour(true) //false
-// timesFour(null) //false
 
-function timesFour (x) {
-    if (typeof parseInt(x) == "number") {
-        return x * 4
-    } else if (typeof parseInt(x) != "number") {
+// 1 deifne function named timeFour
+// 2 timesFour takes in one parameter - input
+// 3 inside of function: multiply input by 4
+// 4 IF(input is number) --> return true
+// 5 IF(input is NOT number) --> return false
+
+// function timesFour(input) {
+//     if(typeof input === "number") {
+//         return input * 4;
+//     } else {
+//         return false
+//     }
+// }
+//
+// timesFour();
+
+function timesFour(input) {
+    if(typeof input == "number" || parseInt(input)) {
+        return input * 4;
+    } else {
         return false
     }
 }
