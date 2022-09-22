@@ -12,12 +12,20 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person = {
-        firstName: "John-Micahel",
-        lastName: "Krsak",
+    let person = {
+        firstName: "Ken",
+        lastName: "Howell,"
     }
-    console.log(person.firstName)
-    console.log(person.lastName)
+    console.log(person.firstName);
+    console.log(person.lastName);
+    console.log(person);
+
+    // var person = {
+    //     firstName: "John-Micahel",
+    //     lastName: "Krsak",
+    // }
+    // console.log(person.firstName)
+    // console.log(person.lastName)
 
     /**
      * TODO:
@@ -29,10 +37,16 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function() {
-        return `Hello ${person.firstName} ${person.lastName}`
+    person.sayHello = function(){
+        console.log(`Hello from ${this.firstName} ${this.lastName}!`);
     }
-    console.log(person.sayHello());
+
+    person.sayHello();
+
+    // person.sayHello = function() {
+    //     return `Hello ${person.firstName} ${person.lastName}`
+    // }
+    // console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -54,17 +68,34 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(x){
-        if (x.amount > 200){
-            let discount = 0.12 * x.amount;
-            let afterDiscount = x.amount - discount;
-            console.log(x.name + " bought products for " + x.amount + "." + " His discount is: " + discount + " and will pay " + afterDiscount + " after the discount.");
+    function hebOffer(arrayOfShoppers){
+
+        arrayOfShoppers.forEach(function (shopper){
+
+        if(shopper.amount > 200) {
+            console.log(`${shopper.name}, you qualified for our offer! You purchased $${shopper.amount} which earns a 12% discount. Your discount is $${shopper.amount * .12} which gives you a new total $${shopper.amount - (shopper.amount * .12)}`);
         } else {
-            let discount = 0;
-            let afterDiscount = x.amount;
-            console.log(x.name + " bought products for " + x.amount + "." + " His discount is: " + discount + " and will pay " + afterDiscount + " after the discount.")
+
+            console.log(`${shopper.name} we were running a discount today if you bought over $200 - unfortunately, your total was $${shopper.amount} and you did not qualify. Perhaps you should go get some more items?`);
         }
-    });
+        })
+
+    }
+
+    hebOffer(shoppers)
+
+
+    // shoppers.forEach(function(x){
+    //     if (x.amount > 200){
+    //         let discount = 0.12 * x.amount;
+    //         let afterDiscount = x.amount - discount;
+    //         console.log(x.name + " bought products for " + x.amount + "." + " His discount is: " + discount + " and will pay " + afterDiscount + " after the discount.");
+    //     } else {
+    //         let discount = 0;
+    //         let afterDiscount = x.amount;
+    //         console.log(x.name + " bought products for " + x.amount + "." + " His discount is: " + discount + " and will pay " + afterDiscount + " after the discount.")
+    //     }
+    // });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -78,6 +109,42 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    // let books = [
+    //     {
+    //         title: "Franny and Zoey",
+    //         author: {
+    //             firstName: "J.D.",
+    //             lastName: "Salinger",
+    //         }
+    //     }, {
+    //         title: "Franny and Zoey",
+    //         author: {
+    //         firstName: "J.D.",
+    //             lastName: "Salinger",
+    //     }, {
+    //         title: "Franny and Zoey",
+    //             author: {
+    //             firstName: "J.D.",
+    //                 lastName: "Salinger",
+    //         }, {
+    //             title: "Franny and Zoey",
+    //                 author: {
+    //                 firstName: "J.D.",
+    //                     lastName: "Salinger",
+    //             },
+    //             {
+    //                 title: "Franny and Zoey",
+    //                     author
+    //             :
+    //                 {
+    //                     firstName: "J.D.",
+    //                         lastName
+    //                 :
+    //                     "Salinger",
+    //                 }
+    //             ,
+    //             }]
 
     var books = [
         {title: "Anna Karenia",
@@ -107,11 +174,26 @@
             }}
     ];
 console.log(books);
+//
+//     books.forEach(function(book){
+//         console.log(book.title + " is the title of this book");
+//         console.log("Author's first name: " + book.author.firstname);
+//         console.log("Author's last name: " + book.author.lastname);
+//     })
 
-    books.forEach(function(book){
-        console.log(book.title + " is the title of this book");
-        console.log("Author's first name: " + book.author.firstname);
-        console.log("Author's last name: " + book.author.lastname);
+    for(let i = 0; i < books.length; i++){
+        console.log(`Book # ${i + 1}`);
+        console.log(`Title: ${books[i].title}`);
+        console.log(`Author: ${books[i].author.firstname} ${books[i].author.lastname}`);
+
+    }
+
+    books.forEach(function
+        (book, index){
+        console.log(`Book # ${index + 1}`);
+        console.log(`Title: ${book.title}`);
+
+
     })
 
     /**
@@ -139,11 +221,11 @@ console.log(books);
      *      ...
      */
 
-    for (let i = 1; i <= 5; i++){
-        console.log("Book # " + i);
-        console.log("Title: " + books[i-1].title);
-        console.log("Author: " + books[i-1].author.firstname + " " + books[i-1].author.lastname);
-    }
+    // for (let i = 1; i <= 5; i++){
+    //     console.log("Book # " + i);
+    //     console.log("Title: " + books[i-1].title);
+    //     console.log("Author: " + books[i-1].author.firstname + " " + books[i-1].author.lastname);
+    // }
 
     /**
      * Bonus:
@@ -156,18 +238,29 @@ console.log(books);
      *   `showBookInfo` function.
      */
 
+    function createBook(bookTitle, author){
+        let authorName = author.split(" ")
 
-
-    function createBook(tit, fn, ln){
-        console.log(tit, fn, ln);
-        return books.push(
-            {title: tit,
-                author: {
-                    firstname: fn,
-                    lastname: ln,
-                }
-        })
+        return {title: bookTitle,
+        author: {
+            firstName: authorName[0],
+            lastName: authorName[1],
+        }}
     }
-createBook("food", "John", "Michael");
-})();
 
+    let books2 = [];
+
+//     function createBook(tit, fn, ln){
+//         console.log(tit, fn, ln);
+//         return books.push(
+//             {title: tit,
+//                 author: {
+//                     firstname: fn,
+//                     lastname: ln,
+//                 }
+//         })
+//     }
+// createBook("food", "John", "Michael");
+
+    // function showBookInfo (a)
+})();
