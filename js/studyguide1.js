@@ -127,3 +127,20 @@ calculateTax();
 
 let schoolName = `codeup`;
 console.log(`Hi my name is John and I attend ${schoolName}`);
+
+let conesToSell = Math.floor(50 + Math.random() * (100 - 50 + 1));
+
+console.log(`I have to sell ${conesToSell} cones`);
+
+do {
+    let customerWants = Math.floor(Math.random() * (100 - 50 + 1));
+    if(conesToSell < customerWants) {
+        console.log(`Cannot sell you ${customerWants} cones, I only have ${conesToSell}...`);
+    } else if(conesToSell > customerWants) {
+        conesToSell -= customerWants;
+        console.log(`${customerWants} cones sold...`);
+    } else {
+        conesToSell -= customerWants;
+        console.log("Yay! I sold them all!");
+    }
+} while(conesToSell > 0);

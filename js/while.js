@@ -20,7 +20,7 @@
 // 32768
 // 65536
 
-let number = 2
+let number = 2;
 
 while(number <= 65536){
     console.log(number);
@@ -46,12 +46,12 @@ while(number <= 65536){
 // Cannot sell you 6 cones I only have 3...  // If there are not enough cones
 // Yay! I sold them all! // If there are no more cones
 
-let conesToSell = Math.floor(50 + Math.random() * (100 - 50 + 1));
+let conesToSell = Math.floor(Math.random() * 50) + 50;
 
 console.log(`I have to sell ${conesToSell} cones`);
 
 do {
-    let customerWants = Math.floor(Math.random() * (100 - 50 + 1));
+    let customerWants = Math.floor(Math.random() * 5) + 1;
     if(conesToSell < customerWants) {
         console.log(`Cannot sell you ${customerWants} cones, I only have ${conesToSell}...`);
     } else if(conesToSell > customerWants) {

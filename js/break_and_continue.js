@@ -39,7 +39,7 @@ let oddNum = parseInt(prompt("Input an Odd Number between 1 and 50."));
 console.log("The number chosen was: "+oddNum);
 
 while(true) {
-    if(oddNum % 2 !== 0 && oddNum < 50 && oddNum > 1) {
+    if(oddNum % 2 !== 0 && oddNum < 50 && oddNum >= 1) {
         break;
     }
     alert("This is not a valid number, you didn't follow the rules!");
