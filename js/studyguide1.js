@@ -32,22 +32,22 @@
 // 4 IF(input is number) --> return true
 // 5 IF(input is NOT number) --> return false
 
-function timesF(input) {
-    if(typeof input == "number") {
-        return input * 4;
-    } else {
-        return false
-    }
-}
-
-timesF();
+// function timesF(input) {
+//     if(typeof input == "number") {
+//         return input * 4;
+//     } else {
+//         return false
+//     }
+// }
+//
+// timesF();
 
 function timesFour(input) {
     if (isNaN(input)){
         return false;
     }
     else if (typeof(input) == "number" || parseInt(input)) {
-        return Number(input) * 4
+        return Number(input ) * 4
     }
     else {
         return false;
