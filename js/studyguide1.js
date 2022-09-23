@@ -19,32 +19,52 @@
 
 // Define a function named timesFour that takes in an input and multiples that input by four if it is numeric. If the input is not numeric, then return false.
 
+// convertDaystoHours(0) //0
+// convertDaystoHours('5') // 120
+// convertDaystoHours('Texas') //false
+// convertDaystoHours([2, 1, 0]) //false
+// convertDaystoHours(true) //false
+// convertDaystoHours(false) //false
+
 // 1 deifne function named timeFour
 // 2 timesFour takes in one parameter - input
 // 3 inside of function: multiply input by 4
 // 4 IF(input is number) --> return true
 // 5 IF(input is NOT number) --> return false
 
-// function timesFour(input) {
-//     if(typeof input === "number") {
-//         return input * 4;
-//     } else {
-//         return false
-//     }
-// }
-//
-// timesFour();
-
-function timesFour(input) {
-    if(typeof input == "number" || parseInt(input)) {
+function timesF(input) {
+    if(typeof input == "number") {
         return input * 4;
     } else {
         return false
     }
 }
 
+timesF();
+
+function timesFour(input) {
+    if (isNaN(input)){
+        return false;
+    }
+    else if (typeof(input) == "number" || parseInt(input)) {
+        return Number(input) * 4
+    }
+    else {
+        return false;
+    }
+}
+
 timesFour();
 
+// function realTimes4(input) {
+//     typeof (input) == "number"
+//     // || parseInt(input)
+//     {
+//         return input * 4
+//     }
+// }
+//
+// realTimes4();
 //----------//
 
 // Define a function named convertDaystoHours that takes in one input Days. Return the conversion of the number of days into total hours. If the input is not numeric or a numeric string, convertDaystoHours, should return false.
@@ -54,6 +74,25 @@ timesFour();
 // convertDaystoHours([2, 1, 0]) //false
 // convertDaystoHours(true) //false
 // convertDaystoHours(false) //false
+
+//define function convertDaystoHours
+//takes in 1 parameter
+//return conversion of days to hours
+//if not numeric or numeric string return false
+
+function convertDaystoHours (days) {
+    if (isNaN(days)) {
+        return false;
+    }
+    else if (typeof(days) == "number" || parseInt(days)) {
+        return Number(days) * 24
+    }
+    else{
+        return false;
+    }
+}
+
+convertDaystoHours();
 
 //----------//
 
@@ -65,6 +104,26 @@ timesFour();
 // calculateTax([1, 2, 3], 10)      // false
 // calculateTax(“Codeup”, 100)      // false
 // calculateTax()                   // false
+// function calculateTax
+// parameters --> 2 (totalPaid, taxPercent)
+// if parameters are numeric or numeric strings
+        //return total bill with tax added in a string
+// if parameters are not numeric or numeric strings
+        //return false
+
+function calculateTax(totalPaid, taxPercent) {
+    let percent = taxPercent / 100
+    if (isNaN(totalPaid || taxPercent )) {
+        return false;
+    } else if (typeof(totalPaid && taxPercent) == "number" || parseInt(totalPaid && taxPercent)) {
+        return `$${Number(( totalPaid) + (totalPaid * percent)).toFixed(2)}`
+    }
+    else{
+        return false;
+    }
+}
+calculateTax();
+
 
 let schoolName = `codeup`;
 console.log(`Hi my name is John and I attend ${schoolName}`);
