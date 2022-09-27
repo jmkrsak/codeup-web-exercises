@@ -8,10 +8,35 @@ h1, h2 {
 }
 
 body {
+    font-family: cursive;
     background-image: url("/images/clouds_background.jpg");
     background-size: cover;
     background-color: silver;
 }
 
+ul {
+    list-style-type: square;
+}
 
+tr, td {
+    font-size: 18px;
+    padding: 15px
+}
+
+a {
+    color: green;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+
+a:hover {
+    background-color: salmon;
+}
+
+a:focus {
+    background-color: red;
+    outline: none;
+}
 
