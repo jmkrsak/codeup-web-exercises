@@ -1,5 +1,17 @@
-.fancy-header {
-    color: purple;
-    text-decoration: underline;
+h1 {
+    text-align: center;
 }
+
+h1, h2 {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+body {
+    background-image: url("/images/clouds_background.jpg");
+    background-size: cover;
+    background-color: silver;
+}
+
+
 
