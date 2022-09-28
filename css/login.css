@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body, html {
@@ -70,7 +69,7 @@ fieldset {
     padding-bottom: 4px;
     margin-top: .5em;
     margin-bottom: .5em;
-    width: calc(100% - 2px);
+    width: calc(100% - 4px);
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
 
