@@ -13,3 +13,12 @@ function addProperty(obj, keys) {
 }
 
 console.log(addProperty({"name": "hi", "age": 69}))
+
+// re-write the following using a for loop: var i = 20; while (i >= 0) { console.log(i); i--; }
+//
+
+
+
+//
+// Add ‘strawberry’ to the beginning, middle, and end of the array. var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+
