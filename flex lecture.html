@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Basics Examples</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Helvetica;
+      font-weight: bold;
+    }
+    .flex-container {
+      width: 100%;
+      height: 200px;
+      border: 3px solid goldenrod;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flex-item {
+      background: #BFD45D;
+      border: 2px solid #F9EFD6;
+      padding: 1em;
+    }
+    .flex-container-baseline{
+      display: flex;
+      align-items: baseline;
+      border: 5px solid blueviolet;
+      height: 50vh;
+      margin-top: 1em;
+    }
+    
+    
+
+  </style>
+</head>
+<body>
+
+<h6>Hello- I'm going to be a flex container with three flex items <span id="smile"></span></h6>
+
+<div class="flex-container-baseline">
+  <div class="box1">first</div>
+  <div class="box2">second</div>
+  <div class="box3">third</div>
+  <div class="box4">fourth</div>
+</div>
+
+<div class="flex-container">
+  <div class="flex-item">Item 1</div>
+  <div class="flex-item">Item 2</div>
+  <div class="flex-item">Item 3</div>
+</div>
+
+<div class="flex-container-wrap">
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+  <div class="flex-item"></div>
+</div>
+
+</body>
+</html>

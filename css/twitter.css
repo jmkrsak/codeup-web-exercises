@@ -99,9 +99,10 @@ a {
     float: left;
 }
 .media-body{
-    float: left;
+    float: right;
     width: calc(100% - 50px);
 }
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
