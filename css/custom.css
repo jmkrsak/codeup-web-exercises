@@ -1,0 +1,12 @@
+div {
+    color: black;
+}
+.container {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    color: black;
+}
+.d-flex {
+    margin-right: auto;
+}
