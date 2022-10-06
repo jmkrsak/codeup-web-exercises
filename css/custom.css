@@ -1,12 +1,14 @@
+.bi-person-fill{
+    /*margin-left: auto;*/
+}
 div {
-    color: black;
+    /*color: black;*/
 }
 .container {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    color: black;
+    /*display: flex;*/
+    /*max-width: 100%;*/
+    /*align-items: center;*/
 }
 .d-flex {
-    margin-right: auto;
+    /*margin-right: auto;*/
 }
