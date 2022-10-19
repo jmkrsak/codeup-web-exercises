@@ -1010,7 +1010,10 @@
 // function shuffleArray(array) {
 //     return array.sort(() => Math.random() - 0.5);
 // }
-
+function checkTheDom() {
+    alert("DOM has finished loading");
+}
+checkTheDom()
 //OBJECTS
 
 
