@@ -1,34 +1,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>kh Lecture View</title>
-    <link rel="stylesheet" href="css/box_css.css">
+    <title>10 Facts</title>
     <style>
-        .dramatic {
-            font-weight: bolder;
-            color: darkred;
-        }
-        li {
-            background-color: rebeccapurple;
-            color: cornflowerblue;
-            list-style: none;
+        .invisible {
+        visibility: hidden;
         }
     </style>
 </head>
 <body>
-<p>Cryptids of Cornwall:</p>
 
 <dl>
-    <dt>Beast of Bodmin</dt>
-    <dd>A large feline inhabiting Bodmin Moor.</dd>
+    <h3>Facts About John-Michael</h3>
+    <dt>JM's favorite food:</dt>
+    <dd>Ribeye Steak</dd>
 
-    <dt>Morgawr</dt>
-    <dd>A sea serpent.</dd>
+    <dt>JM's favorite color:</dt>
+    <dd>Olive Drab Green</dd>
 
-    <dt>Owlman</dt>
-    <dd>A giant owl-like creature.</dd>
+    <dt>JM's favorite number:</dt>
+    <dd>16</dd>
+
+    <dt>JM's favorite sport:</dt>
+    <dd>Football</dd>
+
+    <dt>JM's favorite sports team:</dt>
+    <dd>Chicago Bears</dd>
+
+    <dt>JM's favorite Country:</dt>
+    <dd>United States of America</dd>
+
+    <dt>JM's favorite band:</dt>
+    <dd>August Burns Red</dd>
+
+    <dt>JM's favorite activity:</dt>
+    <dd>Spending Time With My Family</dd>
+
+    <dt>JM's favorite season:</dt>
+    <dd>Autumn</dd>
+
+    <dt>JM's favorite person:</dt>
+    <dd>The Wife</dd>
 </dl>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<a href="#" id="visible-invisible">Click to toggle the see/unsee dd element</a>
+
+<ul>
+    <h3>Facts About Jasmine</h3>
+    <li>Jas's favorite food: anything Italian</li>
+    <li>Jas's favorite color: maroon</li>
+    <li>Jas's favorite person: John-Anthony</li>
+    <li>Jas's favorite activity: sleeping</li>
+</ul>
+<ul>
+    <h3>Facts About John-Anthony</h3>
+    <li>John-Anthony's favorite food: bacon</li>
+    <li>John-Anthony's favorite color: red</li>
+    <li>John-Anthony's favorite person: Jasmine</li>
+    <li>John-Anthony's favorite activity: playing with legos</li>
+</ul>
+<ul>
+    <h3>Facts About Sunny</h3>
+    <li>Sunny's favorite food: bacon</li>
+    <li>Sunny's favorite color: unknown</li>
+    <li>Sunny's favorite person: John-Anthony</li>
+    <li>Sunny's favorite activity: barking</li>
+</ul>
+
+<button type="button">change the background color</button>
+
+<script src="jquery-3.6.0.js"></script>
+<script>
+    $('dd').addClass('invisible');
+
+    $(document).ready(function() {
+        $('#visible-invisible').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible')
+        })
+    });
+
+    $(document).ready(function() {
+        $('dt').click(function () {
+                $(this).css('background-color', 'yellow');
+        });
+    });
+
+    $(document).ready(function() {
+        $('button').click(function(event) {
+            event.preventDefault();
+            $('ul').each(function(index) {
+                $(this).children().last().css('background-color', 'yellow')
+            })
+        })
+    });
+
+    $(document).ready(function() {
+        $('h3').click(function () {
+            $(this).next().css('font-weight', 'bold')
+            })
+        });
+
+    $(document).ready(function() {
+        $('li').click(function () {
+            $('ul').each(function(index) {
+                $(this).children('li').first().css('color', 'blue')
+            })
+        })
+    });
+
+</script>
 <script>
 </script>
 </body>
