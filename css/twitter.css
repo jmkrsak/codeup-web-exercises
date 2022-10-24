@@ -51,11 +51,11 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+    position: relative;
 }
 .profile-image {
     position: absolute;
-    top: 240px;
-    line-height: 80px;
+    top: -30px;
 }
 .profile-form {
     float: right;
@@ -86,7 +86,7 @@ a {
 .container {
     margin: 2em;
 }
-.media {
+.media{
     width: 100%;
     background-color: var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
@@ -95,14 +95,12 @@ a {
 }
 .media-image {
     width: 50px;
-    margin: 1.33em;
-    float: left;
+    margin-top: 1.33em;
 }
-.media-body{
+.media-body {
     float: right;
     width: calc(100% - 50px);
 }
-
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
