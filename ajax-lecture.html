@@ -14,23 +14,67 @@
 <body>
 
 <div id="map"></div>
-
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 <script>
-    const key = PASTE_KEY_HERE;
+    const key = "pk.eyJ1Ijoiam1rcnNhayIsImEiOiJjbDluODRhdG8wMTR2M3VvNDV2b2Z2bXMyIn0.e_5BhKxgEGYMA2zwthjBhQ";
 
     mapboxgl.accessToken = key;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         //TODO: Set your own zoom and center
+        // zoom: 14,
+        // center: [-98.64666, 29.51036]
+        zoom: 15,
+        center: [-79.32975, 36.02949],
+
     });
 
     //TODO: Set zoom on your own with a map.setZoom call in your console
 
     //TODO: Add your own marker to where we've aligned your map so far
 
+    let marker = new mapboxgl.Marker()
+        .setLngLat([-79.32975, 36.02949])
+        .addTo(map)
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-79.32975, 36.02949])
+        .setHTML("<p>This is my house</p>")
+        .addTo(map)
+
+    var alamoPopup = new mapboxgl.Popup()
+        .setHTML("<p>Remember The Alamo!</p>")
+
+    marker.setPopup(alamoPopup)
+
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([0, 0])
+    //     .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
+    //     .addTo(map);
+    //
+    // marker.togglePopup(); // toggle popup open or closed
+    geocode("235 solstice Dr.", key).then(function(result){
+        console.log(result)
+        let marker2 = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+        let popup2 = new mapboxgl.Popup()
+            .setLngLat(result)
+            .setHTML("<p>Parents Casa</p>")
+            .addTo(map)
+    })
+
+
+
+
+
     //TODO: Use the geocode method to add a 2nd marker and popup to your map, then center your map over it
+
+    reverseGeocode({lng: -98.48616, lat: 29.42598}, key).then(function(result){
+        alert(`heres the address ${result}`)
+    })
 
     //TODO: Try a reverse geocode yourself and see what address you get back for your coordinates - remember to send up a {lng: <lng>, lat: <lat>} object
 </script>
