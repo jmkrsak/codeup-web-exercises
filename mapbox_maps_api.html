@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<script>
+
+    const key = "pk.eyJ1Ijoiam1rcnNhayIsImEiOiJjbDluODRhdG8wMTR2M3VvNDV2b2Z2bXMyIn0.e_5BhKxgEGYMA2zwthjBhQ";
+    mapboxgl.accessToken = key;
+
+    geocode("2111 Kirkwood St, High Point, NC 27262", key).then(function(result){
+        console.log(result)
+        let map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 15,
+            center: result,
+        });
+        const marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .setPopup(new mapboxgl.Popup().setHTML("<h1>Korean BBQ</h1>"))
+            .addTo(map);
+    });
+
+    //     Redraw the map of the above location at zoom levels 5, 15, and 20. Do this by simply changing the value of zoom level where the map properties are initially set and refresh the page to see the changes. Can the zoom be changed programmatically after the initial map is drawn?
+
+    // function changeZoom(input) {
+    //     map.transform._zoom = input
+    // };
+
+    //     Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
+
+    //     Create a popup with the name of the restaurant.
+
+    //     Make sure the info window does not display until the marker has been clicked on.
+
+    //     Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
+
+
+
+
+    // geocode("2111 Kirkwood St, High Point, NC 27262", key).then(function(result){
+
+        // var map = new mapboxgl.Map({
+        //     container: 'map',
+        //     style: 'mapbox://styles/mapbox/streets-v9',
+        //     zoom: 15,
+        //     center: [-80.02171, 35.9838],
+        // });
+
+        // let marker2 = new mapboxgl.Marker()
+        //     .setLngLat(result)
+        //     .addTo(map)
+        // let popup2 = new mapboxgl.Popup()
+        //     .setLngLat(result)
+        //     .setHTML("<p>Parents Casa</p>")
+        //     .addTo(map)
+    // });
+
+
+    // let marker = new mapboxgl.Marker()
+    //     .setLngLat([-80.02388, 35.98371])
+    //     .addTo(map)
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat([-79.32975, 36.02949])
+    //     .setHTML("<p>This is my house</p>")
+    //     .addTo(map)
+    // var alamoPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>Remember The Alamo!</p>")
+    // marker.setPopup(alamoPopup)
+
+    // reverseGeocode({lng: -98.48616, lat: 29.42598}, key).then(function(result){
+    //     alert(`heres the address ${result}`)
+    // })
+</script>
+</body>
+</html>
