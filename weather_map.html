@@ -7,8 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/weather_map.css">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <h1>Weather App</h1>
+</header>
 
 
 <h1>How is your current weather? Where are you?</h1>
@@ -21,10 +30,36 @@
 
 <!--https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}-->
 
-<script src="js/weathermap.js"></script>
+
+<div id="map"></div>
+<!--<script src="js/weathermap.js"></script>-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 <script src="jquery-3.6.0.js"></script>
 <script src="js/keys.js"></script>
 <script>
+
+// ----- map box -----
+
+mapboxgl.accessToken = MAP_KEY;
+
+console.log(MAP_KEY)
+
+geocode("2111 Kirkwood St, High Point, NC 27262", MAP_KEY).then(function(result){
+    console.log(result)
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 15,
+        center: result,
+    });
+    const marker = new mapboxgl.Marker()
+        .setLngLat(result)
+        .setPopup(new mapboxgl.Popup().setHTML("<h1>Korean BBQ</h1>"))
+        .addTo(map);
+});
+
+// ----- weather map -----
 
     console.log(API_KEY);
 
