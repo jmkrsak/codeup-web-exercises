@@ -1,6 +1,5 @@
-require('dotenv').config()
-"use strict"
-let key = process.env.API_KEY;
-console.log(key);
+require('dotenv').config();
+const key = process.env.API_KEY;
+
 
 
