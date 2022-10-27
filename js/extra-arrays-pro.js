@@ -40,7 +40,6 @@ function removeAll(array, value) {
         }
     } return newArr
 }
-
 console.log(removeAll(bugs, "ant"));
 //     ```
 //
@@ -104,23 +103,55 @@ console.log(coinFlip());
 //  */
 //
 // // Exercise 0. Write a function named first() that returns only the first element of an array
-//
+function first(array) {
+    return array[0]
+}
+console.log(first(bugs));
 // // Exercise 1. Write a function named secondToLast() that returns the second to last element
-//
+function secondToLast(array) {
+    return array[array.length - 2]
+}
+console.log(secondToLast(bugs));
 // // Exercise 2. Write a function named rest() that takes an an array and returns an array containing everything except the first element.
-//
+function rest(array) {
+    array.shift()
+    return array
+}
+console.log(rest(bugs));
 // // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
-//
+function getLongestString(array) {
+    return (array.sort((a,b) => a.length - b.length))[array.length - 1]
+}
+console.log(getLongestString(bugs))
 // // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
-//
+function getShortestString(array) {
+    return (array.sort((a,b) => a.length - b.length))[0]
+}
+console.log(getShortestString(bugs));
 // // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
 // // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
-//
+function addTwoArrays(array1, array2) {
+    // return array1.concat(array2)
+    return [...array1, ...array2]
+}
+console.log(addTwoArrays(bugs, fruits));
 // // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
 // // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
-//
+function getUniqueValues(array1, array2) {
+    let concatArr = array1.concat(array2)
+    let uniqueArray = [...new Set(concatArr)]
+    return uniqueArray
+}
+console.log(getUniqueValues(bugs, fruits));
 // // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.
-//
+function reverseArray(array) {
+    return array.slice().reverse()
+    // console.log(array);
+    // let newArr = array.reverse()
+    // console.log(array);
+    // return newArr
+}
+console.log(reverseArray(bugs));
 // // Exercies 7. Write a function named getRandomQuote().
 // //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
 // //   getRandomQuote should generate a random number between 0 and the array's length minus 1
@@ -175,7 +206,24 @@ function findShape (arr, target) {
 }
 findShape(shapes, "diamond")
 // 2.  Create a function that returns a random day of the week
+let days = ["mon", "tue", "wed", "thur", "fri", "sat", "sun"]
+// function returnRanDay(array) {
+//
+// }
 // 3.  Create a function that takes a single letter and returns what number the letter is in the alphabet. Ignore case.
+function letterToNum(x) {
+    let alph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    let alphNum = null
+    for (let i = 0; i < alph.length; i++) {
+        // console.log(alph[i]);
+        if (alph[i] === x) {
+            console.log(alph[i]);
+            alphNum = alph.indexOf(alph[i]) + 1
+        }
+    }
+    return alphNum
+}
+console.log(letterToNum("w"));
 // – someFunction("a") // returns 1
 // – someFunction("z") // returns 26
 // 4.  Create a function that returns the longest string in a given array of string elements.
