@@ -6,13 +6,22 @@
 //     Given:
 //
 // ```js
-//     var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
+    var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
 //     ```
 //
 //     - `allIndexesOf(fruits, "apple")` should return the array [0, 3]
 // - `allIndexesOf(fruits, "guava")` should return the array []
 // - `allIndexesOf(fruits, "pineapple")` should return [4]
-//
+function allIndexesOf(arr, srcVal) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === srcVal) {
+            newArr.push(i)
+        }
+    } return newArr
+}
+
+console.log(allIndexesOf(fruits, "apple"));
 //
 // - Define a function named `removeAll(array, value)` that takes in two arguments.
 //     The first argument should be an array and the second argument should be a
@@ -21,7 +30,18 @@
 //     Given:
 //
 // ```js
-//     var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+
+function removeAll(array, value) {
+    let newArr = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== value) {
+            newArr.push(array[i])
+        }
+    } return newArr
+}
+
+console.log(removeAll(bugs, "ant"));
 //     ```
 //
 //     - `removeAll(bugs, "ant")` should return `["mosquito", "scorpion",
@@ -35,7 +55,16 @@
 //
 // - Make a function called randomIntBetween(min, max) that returns a random number
 // between the min and the max.
+function randomIntBetween(min, max) {
+    return parseInt(Math.random()*(max - min) + min)
+}
+console.log(randomIntBetween(20, 100));
 // - Make a function called `coinFlip()` that returns either 0 or 1, randomly
+function coinFlip() {
+    return Math.round(Math.random())
+    // return Math.floor(Math.random() + .5)
+}
+console.log(coinFlip());
 // - Make a function called `twoDice()` that returns the sum of rolling two six
 // sided dice.
 // - Make a function called `twentySidedDie()` that returns a random integer
@@ -136,6 +165,15 @@
 //     – prompt the user to search for a specific shape
 //     – using a for loop, iterate through the array to log the shapes until the matching shape is found
 //     – once the shape is found, log a message (“Shape is found”) and use a break statement to exit loop.
+let shapes = ["circle", "square", "triangle", "rectangle", "diamond"]
+function findShape (arr, target) {
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] === target) {
+            console.log("shape is found")
+            break
+        }
+}
+findShape(shapes, "diamond")
 // 2.  Create a function that returns a random day of the week
 // 3.  Create a function that takes a single letter and returns what number the letter is in the alphabet. Ignore case.
 // – someFunction("a") // returns 1
