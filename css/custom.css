@@ -1,14 +1,15 @@
-.bi-person-fill {
-    /*margin-left: auto;*/
+.jumbotron {
+    background-image: url("/images/pizza.png");
+    height: 346px;
+    background-size: cover;
 }
-div {
-    /*color: black;*/
+.jumbotron>h1 {
+    display: flex;
+    justify-content: center;
+    text-align-all: center;
+    position: relative;
+    top: 3.5em;
 }
-.container {
-    /*display: flex;*/
-    /*max-width: 100%;*/
-    /*align-items: center;*/
-}
-.d-flex {
-    /*margin-right: auto;*/
+#make-work {
+    margin-left: auto;
 }
