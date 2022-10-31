@@ -51,7 +51,24 @@ $.ajax({
     }
 }).done(function (data) {
     $('#weather-data').empty()
+    console.log(data)
     let localInfo = `${data.city.name}, ${data.city.country}`
+    if (data.list[0].main.temp_min > 90) {
+        console.log(data.list[0].main.temp_min)
+        $('body').css('background-color', 'red');
+    } else if (data.list[0].main.temp_min > 70) {
+        console.log(data.list[0].main.temp_min)
+        $('body').css('background-color', 'orange');
+    } else if (data.list[0].main.temp_min > 50) {
+        console.log(data.list[0].main.temp_min)
+        $('body').css('background-color', 'yellow');
+    } else if (data.list[0].main.temp_min > 30) {
+        console.log(data.list[0].main.temp_min)
+        $('body').css('background-color', 'blue');
+    } else {
+        console.log(data.list[0].main.temp_min)
+        $('body').css('background-color', 'white');
+    }
     data.list.forEach(function (unit) {
         if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
             date = unit.dt_txt.split(" ")[0];
@@ -103,6 +120,22 @@ function presentMap(input) {
     }).done(function (data) {
         $('#weather-data').empty()
         let localInfo = `${data.city.name}, ${data.city.country}`
+        if (data.list[0].main.temp_min > 90) {
+            console.log(data.list[0].main.temp_min)
+            $('body').css('background-color', 'red');
+        } else if (data.list[0].main.temp_min > 70) {
+            console.log(data.list[0].main.temp_min)
+            $('body').css('background-color', 'orange');
+        } else if (data.list[0].main.temp_min > 50) {
+            console.log(data.list[0].main.temp_min)
+            $('body').css('background-color', 'yellow');
+        } else if (data.list[0].main.temp_min > 30) {
+            console.log(data.list[0].main.temp_min)
+            $('body').css('background-color', 'blue');
+        } else {
+            console.log(data.list[0].main.temp_min)
+            $('body').css('background-color', 'white');
+        }
         data.list.forEach(function (unit) {
             if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                 date = unit.dt_txt.split(" ")[0];
@@ -164,6 +197,22 @@ function srcInput(input) {
         }).done(function (data) {
             $('#weather-data').empty()
             let localInfo = `${data.city.name}, ${data.city.country}`
+            if (data.list[0].main.temp_min > 90) {
+                console.log(data.list[0].main.temp_min)
+                $('body').css('background-color', 'red');
+            } else if (data.list[0].main.temp_min > 70) {
+                console.log(data.list[0].main.temp_min)
+                $('body').css('background-color', 'orange');
+            } else if (data.list[0].main.temp_min > 50) {
+                console.log(data.list[0].main.temp_min)
+                $('body').css('background-color', 'yellow');
+            } else if (data.list[0].main.temp_min > 30) {
+                console.log(data.list[0].main.temp_min)
+                $('body').css('background-color', 'blue');
+            } else {
+                console.log(data.list[0].main.temp_min)
+                $('body').css('background-color', 'white');
+            }
             data.list.forEach(function (unit) {
                 if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                     date = unit.dt_txt.split(" ")[0];
