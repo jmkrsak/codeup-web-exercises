@@ -26,9 +26,16 @@ const geocoder = new MapboxGeocoder({
 });
 // ----- getting location data based on marker
 map.addControl(geocoder);
-marker = new mapboxgl.Marker();
+marker = new mapboxgl.Marker({
+    draggable: true
+});
 map.on('click', function (e) {
     presentMap(e.lngLat)
+})
+// ----- made marker dragable
+marker.on("dragend", function(e){
+    var lanLat = e.target.getLngLat();
+    presentMap(lanLat)
 })
 // ----- generate map and forcast using marker selection
 $.ajax({
