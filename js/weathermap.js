@@ -51,6 +51,7 @@ $.ajax({
     }
 }).done(function (data) {
     $('#weather-data').empty()
+    let localInfo = `${data.city.name}, ${data.city.country}`
     data.list.forEach(function (unit) {
         if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
             date = unit.dt_txt.split(" ")[0];
@@ -63,17 +64,24 @@ $.ajax({
             pressure = unit.main.pressure;
 
             let html = "";
-            html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
-            html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
+            html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
+            html += '<div class="card card-header">'
+            html += '<p class="mb-4 card-header">' + "<strong>" + localInfo + "</strong>" + "</p>";
+            html += '<p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
+            html += '<p class="mb-2">' + "High: " + "<strong>" + tempMin + '˚F' + "</strong>" + '</p>';
+            html += '<p class="mb-2">' + "low: " + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
             html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
-            html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
-            html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
+            html += '<p class="mb-2">' + 'Desciption: ' + '</p>';
+            html += '<p class="mb-2">' + "<strong>" + description + "</strong>" + '</p>';
+            html += '<p class="mb-2">' + 'Humdidity: ' + '</p>';
+            html += '<p class="mb-2">' + "<strong>" + humidity + "</strong>" + '</p>';
             html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
-            html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
+            html += '<p class ="mb-2">' + 'Pressure: ' + '</p>';
+            html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
+            html += '</div>';
             html += '</div>';
 
             $('#weather-data').append(html);
-            console.log(forcastDays)
             forcastDays--;
         }
     })
@@ -94,6 +102,7 @@ function presentMap(input) {
         }
     }).done(function (data) {
         $('#weather-data').empty()
+        let localInfo = `${data.city.name}, ${data.city.country}`
         data.list.forEach(function (unit) {
             if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                 date = unit.dt_txt.split(" ")[0];
@@ -106,13 +115,21 @@ function presentMap(input) {
                 pressure = unit.main.pressure;
 
                 let html = "";
-                html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
-                html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
+                html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
+                html += '<div class="card card-header">'
+                html += '<p class="mb-4 card-header">' + "<strong>" + localInfo + "</strong>" + "</p>";
+                html += '<p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
+                html += '<p class="mb-2">' + "High: " + "<strong>" + tempMin + '˚F' + "</strong>" + '</p>';
+                html += '<p class="mb-2">' + "low: " + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
                 html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
-                html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
-                html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
+                html += '<p class="mb-2">' + 'Desciption: ' + '</p>';
+                html += '<p class="mb-2">' + "<strong>" + description + "</strong>" + '</p>';
+                html += '<p class="mb-2">' + 'Humdidity: ' + '</p>';
+                html += '<p class="mb-2">' + "<strong>" + humidity + "</strong>" + '</p>';
                 html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
-                html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
+                html += '<p class ="mb-2">' + 'Pressure: ' + '</p>';
+                html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
+                html += '</div>';
                 html += '</div>';
 
                 $('#weather-data').append(html);
@@ -146,6 +163,7 @@ function srcInput(input) {
             }
         }).done(function (data) {
             $('#weather-data').empty()
+            let localInfo = `${data.city.name}, ${data.city.country}`
             data.list.forEach(function (unit) {
                 if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                     date = unit.dt_txt.split(" ")[0];
@@ -157,19 +175,26 @@ function srcInput(input) {
                     wind = unit.wind.speed;
                     pressure = unit.main.pressure;
 
-                let html = "";
-                html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
-                html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
-                html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
-                html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
-                html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
-                html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
-                html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
-                html += '</div>';
+                    let html = "";
+                    html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
+                    html += '<div class="card card-header">'
+                    html += '<p class="mb-4 card-header">' + "<strong>" + localInfo + "</strong>" + "</p>";
+                    html += '<p class="mb-4 card-header">' + "<strong>" + date + "</strong>" + "</p>";
+                    html += '<p class="mb-2">' + "High: " + "<strong>" + tempMin + '˚F' + "</strong>" + '</p>';
+                    html += '<p class="mb-2">' + "low: " + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
+                    html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
+                    html += '<p class="mb-2">' + 'Desciption: ' + '</p>';
+                    html += '<p class="mb-2">' + "<strong>" + description + "</strong>" + '</p>';
+                    html += '<p class="mb-2">' + 'Humdidity: ' + '</p>';
+                    html += '<p class="mb-2">' + "<strong>" + humidity + "</strong>" + '</p>';
+                    html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
+                    html += '<p class ="mb-2">' + 'Pressure: ' + '</p>';
+                    html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
+                    html += '</div>';
+                    html += '</div>';
 
-                $('#weather-data').append(html);
-                console.log(forcastDays)
-                forcastDays--;
+                    $('#weather-data').append(html);
+                    forcastDays--;
             }
         })
     })
