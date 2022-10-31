@@ -17,7 +17,7 @@ let map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/streets-v11',
     zoom: zoomSet,
     center: defaultCenter,
-});danis
+});
 // ----- creates in map search bar
 const geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
