@@ -3,47 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
-<header>
-    <h1>Weather App</h1>
-</header>
-<main>
-    <form class="row g-3">
-        <div class="col-auto">
-            <label for="staticEmail2" class="visually-hidden">Location</label>
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Location">
-        </div>
-        <div class="col-auto">
-            <label for="search-box" class="visually-hidden">City, State</label>
-            <input id="search-box" placeholder="City, State">
-        </div>
-        <div class="col-auto">
-            <button id="searchBtn" type="submit" class="btn btn-primary mb-3">Submit</button>
-        </div>
-    </form>
-    <div class="container">
-        <div class="mx-2">
-            <div class="row" id="weather-data"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="mx-2">
-            <div class="row" id="map"></div>
-        </div>
-    </div>
-</main>
+<div class="container">
+<h1>Weather App</h1>
+<div class="container-fluid">
+<div class="row" id="weather-data"></div>
 
-<div id="current"></div>
-
-<!--https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}-->
-
+<div id="map"></div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+</script>
 <script src="js/keys.js"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 <script src="jquery-3.6.0.js"></script>
 <script src="js/weathermap.js"></script>
 </body>
