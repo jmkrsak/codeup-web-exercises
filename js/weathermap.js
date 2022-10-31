@@ -1,15 +1,6 @@
-// require('dotenv').config()
-//
-// require('dotenv').config()
-// console.log(process.env);
-// const key = process.env.API_KEY;
-//
-// console.log("sanity check");
-// -----weather objects made into html-----
-// ----- map box -----
-
+// ----- map api key
 mapboxgl.accessToken = MAP_KEY;
-
+// ----- variables used
 let zoomSet = 15;
 let defaultCenter = [-79.32971, 36.02948];
 let date;
@@ -20,26 +11,26 @@ let description;
 let humidity;
 let wind;
 let pressure;
-
+// ----- creating stock map on my location from mapbox
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     zoom: zoomSet,
     center: defaultCenter,
 });
+// ----- setting to use in map marker selections
 const geocoder = new MapboxGeocoder({
-// Initialize the geocoder
-    accessToken: mapboxgl.accessToken, // Set the access token
-    mapboxgl: mapboxgl, // Set the mapbox-gl instance
-    marker: false, // Do not use the default marker style
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+    marker: false,
 });
+// ----- getting location data based on marker
 map.addControl(geocoder);
 marker = new mapboxgl.Marker();
 map.on('click', function (e) {
-    console.log(e)
     presentMap(e.lngLat)
 })
-let forcastDays = 5;
+// ----- generate map and forcast using marker selection
 $.ajax({
     url: `https://api.openweathermap.org/data/2.5/forecast`,
     type: "GET",
@@ -50,25 +41,24 @@ $.ajax({
         units: "imperial",
     }
 }).done(function (data) {
+    let forcastDays = 5;
+    // ----- using data from stock map to generate forcast
     $('#weather-data').empty()
-    console.log(data)
+    // ----- adding city country to forcast cards
     let localInfo = `${data.city.name}, ${data.city.country}`
+    // ----- creating if statments to change background based on temperature
     if (data.list[0].main.temp_min > 90) {
-        console.log(data.list[0].main.temp_min)
         $('body').css('background-color', 'red');
     } else if (data.list[0].main.temp_min > 70) {
-        console.log(data.list[0].main.temp_min)
         $('body').css('background-color', 'orange');
     } else if (data.list[0].main.temp_min > 50) {
-        console.log(data.list[0].main.temp_min)
         $('body').css('background-color', 'yellow');
     } else if (data.list[0].main.temp_min > 30) {
-        console.log(data.list[0].main.temp_min)
         $('body').css('background-color', 'blue');
     } else {
-        console.log(data.list[0].main.temp_min)
         $('body').css('background-color', 'white');
     }
+    // ----- creating vars to later use to generate forcast cards
     data.list.forEach(function (unit) {
         if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
             date = unit.dt_txt.split(" ")[0];
@@ -79,7 +69,7 @@ $.ajax({
             humidity = unit.main.humidity;
             wind = unit.wind.speed;
             pressure = unit.main.pressure;
-
+            // ----- adding var forcast data to cards
             let html = "";
             html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
             html += '<div class="card card-header">'
@@ -97,16 +87,15 @@ $.ajax({
             html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
             html += '</div>';
             html += '</div>';
-
+            // ----- appending html to data using forcastDays to make 5 cards
             $('#weather-data').append(html);
             forcastDays--;
         }
     })
 })
-//----- weather map -----
+// ----- generate map and forcast using marker selection
 function presentMap(input) {
     let forcastDays = 5;
-    console.log(input)
     marker.setLngLat(input).addTo(map)
     $.ajax({
         url: `https://api.openweathermap.org/data/2.5/forecast`,
@@ -118,24 +107,23 @@ function presentMap(input) {
             units: "imperial",
         }
     }).done(function (data) {
+        // ----- using data from marker selection to generate forcast
         $('#weather-data').empty()
+        // ----- adding city country to forcast cards
         let localInfo = `${data.city.name}, ${data.city.country}`
+        // ----- creating if statments to change background based on temperature
         if (data.list[0].main.temp_min > 90) {
-            console.log(data.list[0].main.temp_min)
             $('body').css('background-color', 'red');
         } else if (data.list[0].main.temp_min > 70) {
-            console.log(data.list[0].main.temp_min)
             $('body').css('background-color', 'orange');
         } else if (data.list[0].main.temp_min > 50) {
-            console.log(data.list[0].main.temp_min)
             $('body').css('background-color', 'yellow');
         } else if (data.list[0].main.temp_min > 30) {
-            console.log(data.list[0].main.temp_min)
             $('body').css('background-color', 'blue');
         } else {
-            console.log(data.list[0].main.temp_min)
             $('body').css('background-color', 'white');
         }
+        // ----- creating vars to later use to generate forcast cards
         data.list.forEach(function (unit) {
             if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                 date = unit.dt_txt.split(" ")[0];
@@ -146,7 +134,7 @@ function presentMap(input) {
                 humidity = unit.main.humidity;
                 wind = unit.wind.speed;
                 pressure = unit.main.pressure;
-
+                // ----- adding var forcast data to cards
                 let html = "";
                 html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
                 html += '<div class="card card-header">'
@@ -164,27 +152,22 @@ function presentMap(input) {
                 html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
                 html += '</div>';
                 html += '</div>';
-
+                // ----- appending html to data using forcastDays to make 5 cards
                 $('#weather-data').append(html);
                 forcastDays--;
             }
         })
     })
 }
-// $('#search').on("change",srcInput);
-// $('#submitBtn').click(function (e){
-//     e.preventDefault();
-//     console.log(e);
-// })
+// ----- setting to use in map text input
 geocoder.on('result', function(e) {
-    console.log(e)
     srcInput(e.result.center)
 })
+// ----- generate map and forcast using maps texts inputs
 function srcInput(input) {
     let forcastDays = 5;
     console.log(input)
         marker.setLngLat(input).addTo(map);
-        console.log(input);
         $.ajax({
             url: `https://api.openweathermap.org/data/2.5/forecast`,
             type: "GET",
@@ -195,24 +178,23 @@ function srcInput(input) {
                 units: "imperial",
             }
         }).done(function (data) {
+            // ----- using data from map text input to generate forcast
             $('#weather-data').empty()
+            // ----- adding city country to forcast cards
             let localInfo = `${data.city.name}, ${data.city.country}`
+            // ----- creating if statments to change background based on temperature
             if (data.list[0].main.temp_min > 90) {
-                console.log(data.list[0].main.temp_min)
                 $('body').css('background-color', 'red');
             } else if (data.list[0].main.temp_min > 70) {
-                console.log(data.list[0].main.temp_min)
                 $('body').css('background-color', 'orange');
             } else if (data.list[0].main.temp_min > 50) {
-                console.log(data.list[0].main.temp_min)
                 $('body').css('background-color', 'yellow');
             } else if (data.list[0].main.temp_min > 30) {
-                console.log(data.list[0].main.temp_min)
                 $('body').css('background-color', 'blue');
             } else {
-                console.log(data.list[0].main.temp_min)
                 $('body').css('background-color', 'white');
             }
+            // ----- creating vars to later use to generate forcast cards
             data.list.forEach(function (unit) {
                 if (unit.dt_txt.split(" ")[1] === '00:00:00' && forcastDays !== 0) {
                     date = unit.dt_txt.split(" ")[0];
@@ -223,7 +205,7 @@ function srcInput(input) {
                     humidity = unit.main.humidity;
                     wind = unit.wind.speed;
                     pressure = unit.main.pressure;
-
+                    // ----- adding var forcast data to cards
                     let html = "";
                     html += '<div class="container-fluid d-flex col-auto me-auto justify-content-center mb-3">'
                     html += '<div class="card card-header">'
@@ -241,7 +223,7 @@ function srcInput(input) {
                     html += '<p>' + "<strong>" + pressure + "</strong>" + '</p>';
                     html += '</div>';
                     html += '</div>';
-
+                    // ----- appending html to data using forcastDays to make 5 cards
                     $('#weather-data').append(html);
                     forcastDays--;
             }
