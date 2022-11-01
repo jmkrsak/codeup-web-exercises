@@ -61,7 +61,10 @@ console.log(longestEmail);
 
 // let userNamesStr = users.reduce((names, user) => {(users.indexOf(user) !== users.length -1) ? names += user.name + ", ": names += user.name + "."; return names;}, "Your instructors are: ")
 
-let userNameStr = users.reduce((accum, ele, index,arr) => index !== arr.length -1 ? accum + `${ele.name}, ` : accum + `${ele.name}.`, "Your instructors are: ");
+const listOfUsers = users.reduce((acc,item) => acc += `${item.name}, `,"Your instructors are: ").slice(0,-2) + "."
+
+let userNameStr = users.reduce((x, e, y, a) => y !== a.length -1 ? x + `${e.name}, ` : x + `${e.name}.`, "Your instructors are: ");
 
 console.log(userNameStr);
 
+console.log(listOfUsers);
