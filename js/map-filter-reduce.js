@@ -36,14 +36,16 @@ const users = [
     }
 ];
 
-let filterLanguages = users.filter((e) => e.languages.length >= 3)
+let filterLanguages = users.filter((e) => e.languages.length >= 3);
 console.log(filterLanguages);
 
-let usersEmail = users.map((e) => e.email)
+let usersEmail = users.map((e) => e.email);
 console.log(usersEmail);
 
-let yearsExp = users.reduce((x, e) => x + e.yearsOfExperience, 0)
+let yearsExp = users.reduce((x, e) => x + e.yearsOfExperience, 0);
+let averageYears = yearsExp / users.length
 console.log(yearsExp);
+console.log(averageYears)
 
 let longestEmail = users.reduce((x, e) => x.email.length > e.email.length ? x : e).email
 console.log(longestEmail);
@@ -59,7 +61,7 @@ console.log(longestEmail);
 
 // let userNamesStr = users.reduce((names, user) => {(users.indexOf(user) !== users.length -1) ? names += user.name + ", ": names += user.name + "."; return names;}, "Your instructors are: ")
 
-let userNameStr = users.reduce((accum, ele, index) => index !== users.length -1 ? accum += ele.name + ", " : accum += ele.name + ".", "Your instructors are: ");
+let userNameStr = users.reduce((accum, ele, index,arr) => index !== arr.length -1 ? accum + `${ele.name}, ` : accum + `${ele.name}.`, "Your instructors are: ");
 
-console.log(userNameStr)
+console.log(userNameStr);
 
