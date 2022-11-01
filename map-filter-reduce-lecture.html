@@ -85,7 +85,8 @@ let concatNames = people.map((e) => `${e.firstName} ${e.lastName}`);
     let yearSales = [8, 10, 12, 13, 10, 6, 15, 10, 9, 16]
 
   let totalSales = yearSales.reduce(function(total, element){
-    return total + element;
+    console.log(total)
+    return total + element
   })
   let totalSalesToDate = yearSales.reduce((x, e) => x + e, 0)
 
