@@ -5,14 +5,43 @@
     <title>Title</title>
 </head>
 <body>
+<div id="codeup" class="a-div">hello</div>
+<h1 id="the-h1" class="a-h1">hello</h1>
+<h2 id="the-h2" class="codeup">hello</h2>
+<h3 id="the-h3" class="codeup">hello</h3>
+<p>hello</p>
+<li>hello</li>
+<li>hello</li>
+<li>hello</li>
+<script src="jquery-3.6.0.js"></script>
 
     <script>
         function checkTheDom() {
             alert("DOM has finished loading");
         }
         checkTheDom()
+
+        alert($("#the-h2").html())
+        alert($("#the-h1").html())
+        $('.codeup').css({
+            border: '1px solid red'
+        })
+        $('li').css({
+            fontSize: '20px',
+            background: 'yellow'
+        })
+        $('h1').css({
+            background: 'yellow'
+        })
+        $('p').css({
+            background: 'yellow'
+        })
+        alert($('h1').html())
+        $('h1,p,li').css({
+            color: 'blue'
+        })
     </script>
 
-<script src="jquery-3.6.0.js"></script>
+
 </body>
 </html>
