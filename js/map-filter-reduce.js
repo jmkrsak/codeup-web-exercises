@@ -50,18 +50,19 @@ console.log(averageYears)
 let longestEmail = users.reduce((x, e) => x.email.length > e.email.length ? x : e).email
 console.log(longestEmail);
 
-// let userNamesStr = users.reduce(function (accum, ele) {
-//     if (users.indexOf(ele) !== users.length -1) {
-//         accum += ele.name + ", "
-//     } else {
-//         accum += ele.name + ". "
-//     }
-//     return accum
-// }, "Your instructors are: ")
+let userNamesStr = users.reduce(function (accum, ele) {
+    if (users.indexOf(ele) !== users.length -1) {
+        accum += ele.name + ", "
+    } else {
+        accum += ele.name + ". "
+    }
+    return accum
+}, "Your instructors are: ")
 
 // let userNamesStr = users.reduce((names, user) => {(users.indexOf(user) !== users.length -1) ? names += user.name + ", ": names += user.name + "."; return names;}, "Your instructors are: ")
 
-const listOfUsers = users.reduce((acc,item) => acc += `${item.name}, `,"Your instructors are: ").slice(0,-2) + "."
+const listOfUsers = users.reduce((acc,item) =>
+    acc + `${item.name}, `,"Your instructors are: ").slice(0,-2) + "."
 
 let userNameStr = users.reduce((x, e, y, a) => y !== a.length -1 ? x + `${e.name}, ` : x + `${e.name}.`, "Your instructors are: ");
 
