@@ -16,29 +16,48 @@
 <script src="jquery-3.6.0.js"></script>
 
     <script>
-        function checkTheDom() {
-            alert("DOM has finished loading");
-        }
-        checkTheDom()
-
-        alert($("#the-h2").html())
-        alert($("#the-h1").html())
-        $('.codeup').css({
-            border: '1px solid red'
+        // function checkTheDom() {
+        //     alert("DOM has finished loading");
+        // }
+        // checkTheDom()
+        //
+        // alert($("#the-h2").html())
+        // alert($("#the-h1").html())
+        // $('.codeup').css({
+        //     border: '1px solid red'
+        // })
+        // $('li').css({
+        //     fontSize: '20px',
+        //     background: 'yellow'
+        // })
+        // $('h1').css({
+        //     background: 'yellow'
+        // })
+        // $('p').css({
+        //     background: 'yellow'
+        // })
+        // alert($('h1').html())
+        // $('h1,p,li').css({
+        //     color: 'blue'
+        // })
+        $('h1').click(function() {
+            $(this).css({
+                background : 'purple'
+            })
         })
-        $('li').css({
-            fontSize: '20px',
-            background: 'yellow'
+        $('p').dblclick(function() {
+            $(this).css({
+                fontSize: '18px'
+            })
         })
-        $('h1').css({
-            background: 'yellow'
-        })
-        $('p').css({
-            background: 'yellow'
-        })
-        alert($('h1').html())
-        $('h1,p,li').css({
-            color: 'blue'
+        $('li').hover(function(){
+            $(this).css({
+                color : 'red'
+            })
+        }).mouseout(function() {
+            $(this).css({
+                color : 'black'
+            })
         })
     </script>
 
