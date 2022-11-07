@@ -128,38 +128,50 @@
 //     .then(data => console.log(data))
 //     .catch(error => console.log(error))
 
-fetch('https://dog.ceo/api/breeds/image/random')
+
+
+
+// uncomment here after practice
+// fetch('https://dog.ceo/api/breeds/image/random')
+//     .then(response => response.json())
+//     .then(data => {
+//         let imgStr = data.message
+//         console.log(imgStr);
+//         function returnImg () {
+//             let html = ``;
+//             html += `<img src="${imgStr}">`;
+//             $('#image').append(html)
+//         }
+//         returnImg()
+//     })
+//     .catch(error => console.error(error));
+//
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//         userId: 498,
+//         title: "My newly added blog post",
+//         body: "codeup is awesome, and I love to code!"
+//     })
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error))
+//
+// fetch('https://jsonplaceholder.typicode.com/posts/978', {
+//     method: 'DELETE',
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error))
+http://www.omdbapi.com/?t=step+brothers
+fetch(`http://www.omdbapi.com/?t=step+brothers&apikey=${OMDB_KEY}&`)
     .then(response => response.json())
     .then(data => {
-        let imgStr = data.message
-        console.log(imgStr);
-        function returnImg () {
-            let html = ``;
-            html += `<img src="${imgStr}">`;
-            $('#image').append(html)
-        }
-        returnImg()
+        console.log(data);
+
     })
     .catch(error => console.error(error));
-
-fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        userId: 498,
-        title: "My newly added blog post",
-        body: "codeup is awesome, and I love to code!"
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-
-fetch('https://jsonplaceholder.typicode.com/posts/978', {
-    method: 'DELETE',
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
