@@ -11,6 +11,8 @@
             // TODO: return the proper value
             return Math.PI * (Math.pow(this.radius, 2));
         },
+        
+        // right here
 
         logInfo: function (x) {
             // TODO: complete this method.
@@ -29,6 +31,8 @@
         }
     }
 
+
+// right here
     // log info about the circle
     console.log("Raw circle information");
     circle.logInfo(false);
@@ -38,6 +42,8 @@
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
 
+
+// right here
     circle.radius = 5;
     // log info about the circle
     console.log("Raw circle information");
