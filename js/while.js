@@ -27,6 +27,8 @@ while(number <= 65536){
     number = number * 2;
 }
 
+// let's go
+
 // let pow = 0;
 //
 // while (Math.pow(2, pow) < Math.pow(2, 16)) {
