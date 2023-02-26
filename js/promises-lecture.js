@@ -164,6 +164,8 @@
 // fetch('https://jsonplaceholder.typicode.com/posts/978', {
 //     method: 'DELETE',
 // })
+
+// right here
 //     .then(response => response.json())
 //     .then(data => console.log(data))
 //     .catch(error => console.log(error))
